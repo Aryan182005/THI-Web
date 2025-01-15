@@ -9,23 +9,23 @@ const Banner = () => {
             <section className='py-[50px] bg-[#7c78781a]'>
                 <div className="container">
                     <div className="row">
-                        <div className="flex w-full justify-between relative">
-                            <div className="Banner_content w-6/12 flex flex-col justify-center">
-                                <h3 className='text-[24px] font-Primary font-semibold'>Welcome To</h3>
-                                <h2 className='text-[70px] font-Primary font-bold'>The Hidden Ideas</h2>
-                                <p className='text-[20px]'>At The Hidden Ideas, We specialize in providing high-quality, cost-effective offshore software development services to our clients. Our team of experts is committed to delivering timely and efficient solutions that meet the unique needs of each of our clients. We offer affordable and comprehensive custom development solutions to meet the diverse needs of our clients. Our team works closely with each client to ensure that all their requirements are met, and we guarantee the quality of our services.</p>
-                                <div className="flex pt-[30px]">
+                        <div className="flex flex-wrap w-full justify-between relative px-[20px] sm:px-0">
+                            <div className="Banner_content w-full lg:w-6/12 flex flex-col justify-center text-center lg:text-start mb-[50px] lg:mb-0">
+                                <h3 className='text-[18px] sm:text-[24px] font-Primary font-semibold'>Welcome To</h3>
+                                <h2 className='text-[28px] sm:text-[50px] 3xl:text-[70px] font-Primary font-bold pb-[15px] sm:pb-0'>The Hidden Ideas</h2>
+                                <p className='text-[14px] sm:text-[20px]'>At The Hidden Ideas, We specialize in providing high-quality, cost-effective offshore software development services to our clients. Our team of experts is committed to delivering timely and efficient solutions that meet the unique needs of each of our clients. We offer affordable and comprehensive custom development solutions to meet the diverse needs of our clients. Our team works closely with each client to ensure that all their requirements are met, and we guarantee the quality of our services.</p>
+                                <div className="flex justify-center lg:justify-start pt-[30px]">
                                     <Link
                                         to="/contact"
-                                        className="py-3 px-6 bg-Primary text-white rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.3s] hover:bg-white hover:text-Primary hover:border-[3px] hover:border-Primary"
+                                        className="py-2 sm:py-3 px-3 sm:px-6 bg-Primary text-white text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.3s] hover:bg-white hover:text-Primary hover:border-[3px] hover:border-Primary"
                                     >
                                         Get Started
                                     </Link>
                                 </div>
                             </div>
-                            <div className="Banner_svg">
+                            <div className="Banner_svg w-full lg:w-6/12 flex justify-end">
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 500 500" fill="enable-background:new 0 0 500 500" width={'700'} height={'700'}>
+                                    viewBox="0 0 500 500" fill="enable-background:new 0 0 500 500" className='w-full lg:w-[450px] xl:w-[550px] 2xl:w-[700px] h-full lg:h-[450px] xl:h-[550px] 2xl:h-[700px]'>
                                     <g id="Floor">
                                         <path id="Floor_00000105411661892854211080000011897633904647101626_" fill="#FAFAFA" d="M77.661,252.526
 		c-95.177,54.951-95.175,144.044,0.005,198.995c95.18,54.951,249.496,54.951,344.674,0c95.178-54.951,95.175-144.044-0.005-198.995
