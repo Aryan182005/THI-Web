@@ -29,7 +29,7 @@ const AboutUs = () => {
                 <div className="container">
                     <div className="row">
                         <div className="heading flex justify-center text-[38px] font-Primary font-bold mb-[40px] uppercase tracking-wider">
-                            <h2>About Us</h2>
+                            <h2>What is The Hidden Ideas?</h2>
                         </div>
                         <div className="flex w-full">
                             <div className="w-6/12 flex flex-wrap">
