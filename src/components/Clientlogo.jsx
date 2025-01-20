@@ -59,18 +59,30 @@ const Clientlogo = () => {
 
     return (
         <>
-            <section className='py-[100px] relative'>
+            <section className='py-[60px] xl:py-[100px] relative'>
                 <div className="container">
                     <div className="row">
-                        <div className="heading flex justify-center text-[38px] font-Primary font-bold mb-[50px] uppercase tracking-wider">
+                        <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px]  font-Primary font-bold mb-[50px] uppercase tracking-wider">
                             <h2>Valued Clients</h2>
                         </div>
-                        <div className="flex flex-wrap w-full gap-[30px] justify-center">
+                        <div className="flex flex-wrap w-full gap-[30px] justify-center hidden lg:flex">
                             {clientLogo.map((clientLogo, index) => (
-                                <div key={index} className="w-1/12 flex justify-center items-center border-[3px] border-Primary rounded-xl p-[40px] grayscale transition-all duration-[0.2s] hover:grayscale-0 cursor-pointer ">
+                                <div key={index} className="w-3/12 lg:w-2/12 3xl:w-1/12 flex justify-center items-center border-[3px] border-Primary rounded-xl p-[40px] grayscale transition-all duration-[0.2s] hover:grayscale-0 cursor-pointer ">
                                     <img src={clientLogo.Logo} alt="" />
                                 </div>
                             ))}
+                        </div>
+                        <div className="flex flex-wrap w-full gap-[30px] justify-center lg:hidden">
+                            <Marquee speed={30} gradient={false}>
+                                {clientLogo.map((clientLogo, index) => (
+                                    <div
+                                        key={index}
+                                        className="w-[120px] lg:w-[150px] xl:w-[180px] flex justify-center items-center aspect-[2/2] border-[3px] border-Primary rounded-xl p-[20px] grayscale transition-all duration-[0.2s] hover:grayscale-0 cursor-pointer mx-2"
+                                    >
+                                        <img src={clientLogo.Logo} alt="" className="max-w-full" />
+                                    </div>
+                                ))}
+                            </Marquee>
                         </div>
                         <div className="logo_thumb absolute w-[5%] left-[30px] top-[30px] animate-moveLeftBounce" >
                             <img src={logo} alt="" className='opacity-[0.5]' />
@@ -78,6 +90,30 @@ const Clientlogo = () => {
                     </div>
                 </div>
             </section>
+            {/* <section className="py-[100px] relative">
+                <div className="container">
+                    <div className="row">
+                        <div className="heading flex justify-center text-[38px] font-Primary font-bold mb-[50px] uppercase tracking-wider">
+                            <h2>Valued Clients</h2>
+                        </div>
+                        <div className="w-full">
+                            <Marquee speed={30} gradient={false}>
+                                {clientLogo.map((clientLogo, index) => (
+                                    <div
+                                        key={index}
+                                        className="w-[120px] lg:w-[150px] xl:w-[180px] flex justify-center items-center border-[3px] border-Primary rounded-xl p-[20px] grayscale transition-all duration-[0.2s] hover:grayscale-0 cursor-pointer mx-2"
+                                    >
+                                        <img src={clientLogo.Logo} alt="" className="max-w-full" />
+                                    </div>
+                                ))}
+                            </Marquee>
+                        </div>
+                        <div className="logo_thumb absolute w-[5%] left-[30px] top-[30px] animate-moveLeftBounce">
+                            <img src={logo} alt="" className="opacity-[0.5]" />
+                        </div>
+                    </div>
+                </div>
+            </section> */}
         </>
     )
 }

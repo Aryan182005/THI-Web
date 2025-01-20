@@ -31,21 +31,37 @@ const Testimonial = () => {
 
     var settings = {
         dots: true,
-        dotsClass: "slick-dots",
         speed: 500,
         arrows: false,
         autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     };
 
     return (
         <>
-            <section className='py-[100px] bg-[#1173b942]'>
+            <section className='py-[60px] xl:py-[100px] bg-[#1173b942]'>
                 <div className="container">
                     <div className="row">
-                        <div className="heading flex justify-center text-[38px] font-Primary font-bold mb-[50px] uppercase tracking-wider">
+                        <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px]  font-Primary font-bold mb-[50px] uppercase tracking-wider">
                             <h2>Testimonials</h2>
                         </div>
                     </div>
@@ -53,7 +69,7 @@ const Testimonial = () => {
                 <div className="">
                     <Slider {...settings}>
                         {testimoialsData.map((Testimonial, index) => (
-                            <div className="w-4/12 px-[20px] ">
+                            <div className="w-4/12 px-[10px] 2xl:px-[20px] ">
                                 <div key={index} className="relative overflow-hidden border-[3px] border-Primary p-[30px] rounded-2xl transition-all duration-[0.5s] hover:text-white before:absolute before:w-0 before:h-full before:top-0 before:bg-custom-gradient3 before:rounded-2xl before:bottom-0 before:left-auto before:right-0  before:duration-[0.5s] hover:before:w-[100%]  before:blur-2xl before:z-[-1]  after:absolute after:w-0 after:h-full after:top-0 after:bg-custom-gradient3 after:rounded-2xl after:bottom-0 after:left-0 after:right-auto  after:duration-[0.5s] hover:after:w-[100%] after:rotate-[180deg]  after:blur-2xl after:z-[-1]">
                                     <div className="flex w-[12%] mb-[30px]">
                                         <img src={Testimonial.image} alt="" className=' rounded-[100px]' />

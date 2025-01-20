@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Home from './page/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import About from './page/About';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ function App() {
       <div className={`${mobileMenuOpen ? 'blur-background' : ''}`}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </div>

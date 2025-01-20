@@ -129,14 +129,6 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
                 ))}
               </ul>
             </nav>
-            {/* <div className="hidden lg:block">
-              <Link
-                to="/contact"
-                className="py-3 px-6 bg-Primary text-white rounded-lg hover:bg-primary-dark uppercase font-semibold font-Secondary border-[3px] border-Primary tracking-wider transition-all duration-[0.3s] hover:bg-white hover:text-Primary hover:border-[3px] hover:border-Primary"
-              >
-                Contact Us
-              </Link>
-            </div> */}
             <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
               Contact Us
               <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
@@ -165,14 +157,10 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
             </li>
           ))}
         </ul>
-        <div className="flex justify-center pt-[30px]">
-          <Link
-            to="/contact"
-            className="py-3 px-6 bg-Primary text-white rounded-lg hover:bg-primary-dark uppercase font-semibold font-Secondary tracking-wider border-[3px] border-Primary transition-all duration-[0.3s] hover:bg-white hover:text-Primary hover:border-[3px] hover:border-Primary"
-          >
-            Contact Us
-          </Link>
-        </div>
+        <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
+          Contact Us
+          <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
+        </button>
       </div>
     </header>
   );
