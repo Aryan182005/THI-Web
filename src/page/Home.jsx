@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Banner from '../components/Banner'
 import Test from '../components/test'
 import AboutUs from '../components/AboutUs'
@@ -10,19 +10,22 @@ import Choose from '../components/Choose'
 import Testimonial from '../components/Testimonial'
 import Clientlogo from '../components/Clientlogo'
 
+
 const Home = () => {
   return (
     <>
-      <Banner />
-      <AboutUs />
-      <Service />
-      <Logoslide />
-      <Process />
-      <Count />
-      <Choose />
-      <Testimonial />
-      <Clientlogo />
-      {/* <Test /> */}
+      <div >
+        <Banner />
+        <AboutUs />
+        <Service />
+        <Logoslide /> 
+        <Process /> 
+        <Count /> 
+        <Choose />  
+        <Testimonial />   
+        <Clientlogo />  
+        {/* <Test /> */}
+      </div>
     </>
   )
 }

@@ -136,8 +136,8 @@ const Footer = () => {
                     </div>
                     <ul className='flex gap-[20px]'>
                         {socialLink.map((socialLink, index) => (
-                            <li key={index}>
-                                <Link className='flex items-center justify-center w-10 h-10 bg-Primary text-white rounded-lg text-[20px]'>{socialLink.icon}</Link>
+                            <li key={index} className='overflow-hidden'>
+                                <Link className='transition-all duration-[.3s] scale-[1] hover:scale-[1.2] hover:rounded-lg flex items-center justify-center w-10 h-10 bg-Primary text-white rounded-lg text-[20px]'>{socialLink.icon}</Link>
                             </li>
                         ))}
                     </ul>

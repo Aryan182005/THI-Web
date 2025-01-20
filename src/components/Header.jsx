@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { MdOutlineEmail } from "react-icons/md";
-import { FiPhoneCall } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import Logo from "../assets/Logo.png";
@@ -31,12 +29,6 @@ const navLinks = [
   {
     name: "TECHNOLOGIES",
     path: "/technologies",
-    Techsubmenu: [
-      { name: "React", path: "/technologies/react" },
-      { name: "Angular", path: "/technologies/nodejs" },
-      { name: "Next JS", path: "/technologies/python" },
-      { name: "Vue", path: "/technologies/aws" },
-    ],
   },
   {
     name: "Company",
@@ -44,9 +36,8 @@ const navLinks = [
   },
 ];
 
-const Header = () => {
+const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
   const [dropdownOpenIndex, setDropdownOpenIndex] = useState(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 
   const handleMouseEnter = (index) => {
@@ -58,7 +49,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`p-4 bg-white duration-700 lg:shadow-xl  ${mobileMenuOpen ? "shadow-none" : "shadow-xl"} sticky top-0 z-50 animate-slideDown `}>
+    <header className={`p-4 bg-white duration-700 shadow-xl  ${mobileMenuOpen ? "shadow-none" : "shadow-xl"} sticky top-0 z-50 animate-slideDown `}>
       <div className="container xl:mx-auto">
         <div className="flex items-center justify-between">
           <Link to="/">
@@ -138,14 +129,18 @@ const Header = () => {
                 ))}
               </ul>
             </nav>
-            <div className="hidden lg:block">
+            {/* <div className="hidden lg:block">
               <Link
                 to="/contact"
                 className="py-3 px-6 bg-Primary text-white rounded-lg hover:bg-primary-dark uppercase font-semibold font-Secondary border-[3px] border-Primary tracking-wider transition-all duration-[0.3s] hover:bg-white hover:text-Primary hover:border-[3px] hover:border-Primary"
               >
                 Contact Us
               </Link>
-            </div>
+            </div> */}
+            <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
+              Contact Us
+              <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
+            </button>
           </div>
 
           <div className="hamburger-menu block lg:hidden">
@@ -160,12 +155,12 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`duration-500 ${mobileMenuOpen ? "top-[100px]" : "-top-[400px]"}
+        className={`duration-500 ${mobileMenuOpen ? "top-[70px]" : "-top-[410px]"} sm:${mobileMenuOpen ? "top-[80px]" : "-top-[410px]"}
         ${mobileMenuOpen ? "shadow-lg" : "shadow-none"} absolute left-0 w-full bg-white transition-all duration-500 ease-in-out block lg:hidden z-[-1] pt[20px] pb-[30px] px-[10px]`}
       >
         <ul className="">
           {navLinks.map((link, index) => (
-            <li key={index} className="text-center p-[10px] uppercase font-semibold text-gray-700 hover:text-Primary duration-200 ">
+            <li key={index} className="text-center px-[10px] py-[20px] uppercase font-semibold text-gray-700 hover:text-Primary duration-200 border-b-[1px] border-dotted border-[#0000003d]">
               <Link to={link.path || "#"} className={({ isActive }) => ` ${isActive ? "text-Primary" : ""} `}>{link.name}</Link>
             </li>
           ))}
@@ -182,6 +177,7 @@ const Header = () => {
     </header>
   );
 };
+
 
 export default Header;
 
