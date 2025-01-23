@@ -119,16 +119,74 @@
 // export default MouseFollowerCanvas;
 
 
-import React from 'react'
-import { Link } from 'react-router-dom'
-import image from '../assets/mukesh.png'
+// import React from 'react'
+// import { Link } from 'react-router-dom'
+// import image from '../assets/mukesh.png'
 
-const test = () => {
-  return (
-    <>
+// const test = () => {
+//   return (
+//     <>
     
-    </>
-  )
-}
+//     </>
+//   )
+// }
 
-export default test
+// export default test
+
+
+
+import React from 'react';
+
+const Card = ({ image, name, role }) => {
+  return (
+    <div className="group relative w-[300px] h-[350px] rounded-md shadow-md mx-auto bg-white before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-[4px] before:bg-white before:duration-[0.5s] before:-z-[1] hover:before:rotate-[20deg] hover:before:shadow-lg  after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-[4px] after:bg-white after:duration-[0.5s] after:-z-[1] hover:after:rotate-[10deg] hover:after:shadow-lg">
+      <div className="absolute top-[10px] left-[10px] right-[10px] bottom-[10px] bg-[#222] duration-[0.5s] z-[1] group-hover:bottom-[80px]">
+        <img
+          src={image}
+          alt="card-image"
+          className="absolute top-0 left-0 w-full h-full object-cover "
+        />
+      </div>
+      <div className="absolute left-[10px] right-[10px] bottom-[10px] h-[60px] text-center">
+        <h2 className="m-0 p-0 font-semibold text-lg text-gray-600 uppercase">
+          {name}
+          <br />
+          <span className="font-medium text-pink-400 text-sm">{role}</span>
+        </h2>
+      </div>
+    </div>
+  );
+};
+
+const CardGrid = () => {
+  const cards = [
+    {
+      image:
+        'https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      name: 'SomeOne Famous',
+      role: 'Director',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1549417229-aa67d3263c09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      name: 'SomeOne Famous',
+      role: 'Producer',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1548094878-84ced0f6896d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      name: 'SomeOne Famous',
+      role: 'Actor',
+    },
+  ];
+
+  return (
+    <div className="w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto py-[100px]">
+      {cards.map((card, index) => (
+        <Card key={index} image={card.image} name={card.name} role={card.role} />
+      ))}
+    </div>
+  );
+};
+
+export default CardGrid;
