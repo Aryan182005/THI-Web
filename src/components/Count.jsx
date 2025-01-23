@@ -28,7 +28,7 @@ const Count = () => {
         },
         {
             value: 500,
-            title: 'Successful PROJECT Deliver ',
+            title: 'Successful Project Deliver ',
         },
         {
             value: 500,

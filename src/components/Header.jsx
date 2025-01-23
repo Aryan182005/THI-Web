@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import Logo from "../assets/Logo.png";
@@ -52,7 +52,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
     <header className={`p-4 bg-white duration-700 shadow-xl  ${mobileMenuOpen ? "shadow-none" : "shadow-xl"} sticky top-0 z-50 animate-slideDown `}>
       <div className="container xl:mx-auto">
         <div className="flex items-center justify-between">
-          <Link to="/">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)}>
             <img src={Logo} alt="Logo" className="h-10 sm:h-[50px] md:h-[65px]" />
           </Link>
           <div className="flex lg:w-[78%] xl:w-[75%] 2xl:w-[72%] 3xl:w-[68%] justify-between hidden lg:flex items-center">
@@ -76,6 +76,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
                           : "text-gray-700"
                         } hover:text-Primary`
                       }
+                      onClick={() => window.scrollTo(0, 0)}
                     >
                       {link.name}
                     </NavLink>
@@ -95,6 +96,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
                                 `block px-6 py-4 text-[14px] hover:bg-Primary hover:text-white font-Secondary tracking-wider uppercase font-semibold border-b-[1px] border-[#00000018] ${isActive ? "text-Primary" : "text-gray-700"
                                 }`
                               }
+                              onClick={() => window.scrollTo(0, 0)}
                             >
                               {submenuItem.name}
                             </NavLink>
@@ -118,6 +120,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
                                 `block px-6 py-4 text-[14px] hover:bg-Primary hover:text-white font-Secondary tracking-wider uppercase font-semibold border-b-[1px] border-[#00000018] ${isActive ? "text-Primary" : "text-gray-700"
                                 }`
                               }
+                              onClick={() => window.scrollTo(0, 0)}
                             >
                               {TechsubmenuItem.name}
                             </NavLink>
@@ -147,20 +150,26 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
         </div>
       </div>
       <div
-        className={`duration-500 ${mobileMenuOpen ? "top-[70px]" : "-top-[410px]"} sm:${mobileMenuOpen ? "top-[80px]" : "-top-[410px]"}
+        className={`duration-500 ${mobileMenuOpen ? "top-[70px]" : "-top-[410px]"} ${mobileMenuOpen ? "top-[70px]" : "-top-[410px]"}
         ${mobileMenuOpen ? "shadow-lg" : "shadow-none"} absolute left-0 w-full bg-white transition-all duration-500 ease-in-out block lg:hidden z-[-1] pt[20px] pb-[30px] px-[10px]`}
       >
         <ul className="">
           {navLinks.map((link, index) => (
             <li key={index} className="text-center px-[10px] py-[20px] uppercase font-semibold text-gray-700 hover:text-Primary duration-200 border-b-[1px] border-dotted border-[#0000003d]">
-              <Link to={link.path || "#"} className={({ isActive }) => ` ${isActive ? "text-Primary" : ""} `}>{link.name}</Link>
+              <NavLink to={link.path || "#"} className={({ isActive }) => ` ${isActive ? "text-Primary" : ""} `} onClick={() => {
+                setMobileMenuOpen(false);
+                window.scrollTo(0, 0); 
+              }}>{link.name}</NavLink>
             </li>
           ))}
         </ul>
-        <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
-          Contact Us
-          <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
-        </button>
+
+        <div className="flex justify-center pt-[30px]">
+          <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
+            Contact Us
+            <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
+          </button>
+        </div>
       </div>
     </header>
   );

@@ -64,6 +64,11 @@ module.exports = {
           '80%': { transform: 'scaleY(0.5) translateY(5px)' },
           '100%': { transform: ' scaleY(1) translateY(0)' },
         },
+        crose: {
+          '0%, 20%, 50%, 80%, 100%': { transform: ' translateY(0px)' },
+          '40%': { transform: 'scaleX(0.7) translateY(-30px)' },
+          '60%': { transform: ' scaleX(1) translateY(-15px)' },
+        },
         screen1: {
           '0%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(10px)' },
@@ -84,6 +89,7 @@ module.exports = {
         pulse: 'pulseOpacity 1.2s infinite ease-in-out',
         moveLeftBounce: 'moveLeftBounce 3s infinite linear',
         appear: 'appear 1.5s cubic-bezier(.63,.09,.3,1.43) forwards infinite',
+        crose: 'crose 1.5s cubic-bezier(.63,.09,.3,1.43) forwards infinite',
         followParent: 'followParent 12s linear infinite', 
         screen1: 'screen1 3s linear infinite',
         screen2: 'screen2 3s linear infinite',

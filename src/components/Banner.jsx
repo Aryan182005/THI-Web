@@ -1644,7 +1644,7 @@ const Banner = () => {
 											</g>
 										</g>
 									</g>
-									<g id="Speech_Bubble" className='animate-appear  ease-linear transform origin-50-100 animate-appear relative '>
+									<g id="Speech_Bubble" className='animate-appear  ease-linear transform origin-50-100  relative '>
 										<g id="Speech_Bubble_00000096030644272593262010000004003085063330937011_">
 											<g id="Speech_Bubble_00000148632236302422510540000005146957878555128967_">
 												<path fill="#FFFFFF" d="M417.796,70.61c0.018,8.227-3.179,15.716-8.384,21.318l-2.58,2.461
@@ -1670,7 +1670,6 @@ const Banner = () => {
 									</g>
 								</svg>
 							</div>
-
 						</div>
 					</div>
 				</div>

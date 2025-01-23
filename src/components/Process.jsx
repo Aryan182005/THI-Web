@@ -105,9 +105,6 @@ const Process = () => {
                                     <p className='font-Secondary'>From concept to completion, creation is the heartbeat of innovation. We bring ideas to life, shaping them into unique, impactful realities that resonate and inspire.</p>
                                 </div>
                             </div>
-                            {/* <div className=" animate-translateY duration-[0.3s] absolute left-0 top-0 ">
-                                <img src={logo} alt="" className='opacity-[0.4] w-[10%] h-[10%]' />
-                            </div> */}
                             <div className=" absolute md:w-[50%]  h-[64%] left-[188px] sm:left-[268px] md:left-[180px] lg:left-[230px]  top-[19%] bg-white border-[3px] overflow-hidden  border-Primary rounded-2xl -z-[2] border-[2px] md:border-[3px]  border-Primary">
                                 <div className="relative w-[99%] h-[98%] left-0 right-0 bottom-0 rounded-2xl z-20  animate-followParent ">
                                     <div class="absolute w-4 h-4 right-0 left-0 bg-Primary rounded-full animate-pulse "></div>

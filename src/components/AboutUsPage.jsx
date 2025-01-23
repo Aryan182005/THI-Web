@@ -2047,7 +2047,7 @@ const AboutUsPage = () => {
                             </div>
                             <div className="w-6/12 flex flex-col justify-center">
                                 <h2 className='text-[74px] font-Secondary font-semibold pb-[30px]'>About Us</h2>
-                                <p className='text-[20px] font-Secondary'>At WhiteStone Infotech, we provide innovative solutions for businesses. Our team specializes in Web & Mobile app development, & software development. We’re dedicated to delivering reliable, scalable & cost-effective solutions tailored to each client. Partner with us for success.</p>
+                                <p className='text-[20px] font-Secondary'>At The Hidden Ideas, we provide innovative solutions for businesses. Our team specializes in Web & Mobile app development, & software development. We’re dedicated to delivering reliable, scalable & cost-effective solutions tailored to each client. Partner with us for success.</p>
                                 <div className="pt-[30px] flex justify-center xl:justify-start">
                                     <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
                                         Join us
