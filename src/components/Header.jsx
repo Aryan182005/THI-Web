@@ -17,13 +17,41 @@ const navLinks = [
     name: "Service",
     path: "/service",
     submenu: [
-      { name: "Web Development", path: "/service/web-development" },
-      { name: "App Development", path: "/service/app-development" },
-      { name: "SEO", path: "/service/seo" },
-      { name: "Custom Software Development", path: "/service/seo" },
-      { name: "DevOps Consulting", path: "/service/seo" },
-      { name: "Product UI/UX Design ", path: "/service/seo" },
-      { name: "Database and Cloud Transformation", path: "/service/seo" },
+      {
+        name: "Front End",
+        items: [
+          { name: "Angular" },
+          { name: "React" },
+          { name: "Next JS" },
+          { name: "Vue" },
+        ],
+      },
+      {
+        name: "Back End",
+        items: [
+          { name: "Node" },
+          { name: "Php" },
+          { name: "Python"},
+          { name: "Java"},
+        ],
+      },
+      {
+        name: "Frameworks",
+        items: [
+          { name: "Codeigniter" },
+          { name: "WordPress" },
+          { name: "Laravel"},
+          { name: "Cake Php" },
+        ],
+      },
+      {
+        name: "Mobile",
+        items: [
+          { name: "React Native"},
+          { name: "Android"},
+          { name: "iOS"},
+        ],
+      },
     ],
   },
   {
@@ -82,48 +110,30 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
                     </NavLink>
                     {link.submenu && (
                       <ul
-                        className={`absolute left-0 right-0 top-full bg-white shadow-process w-max z-10 overflow-hidden transition-all duration-300 ease-in-out  ${dropdownOpenIndex === index ? "max-h-[500px]" : "max-h-0"
+                        className={`flex absolute left-0 right-0 top-full bg-white shadow-process w-max z-10 overflow-hidden transition-all duration-300 ease-in-out  ${dropdownOpenIndex === index ? "max-h-[500px]" : "max-h-0"
                           }`}
                         style={{
                           transition: "max-height 0.4s ease-in-out",
                         }}
                       >
-                        {link.submenu.map((submenuItem, id) => (
-                          <li key={id}>
-                            <NavLink
-                              to={submenuItem.path || "#"}
-                              className={({ isActive }) =>
-                                `block px-6 py-4 text-[14px] hover:bg-Primary hover:text-white font-Secondary tracking-wider uppercase font-semibold border-b-[1px] border-[#00000018] ${isActive ? "text-Primary" : "text-gray-700"
-                                }`
-                              }
-                              onClick={() => window.scrollTo(0, 0)}
-                            >
-                              {submenuItem.name}
-                            </NavLink>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {link.Techsubmenu && (
-                      <ul
-                        className={`absolute left-0 right-0 top-full bg-white shadow-process w-max z-10 overflow-hidden transition-all duration-300 ease-in-out  ${dropdownOpenIndex === index ? "max-h-[500px]" : "max-h-0"
-                          }`}
-                        style={{
-                          transition: "max-height 0.4s ease-in-out",
-                        }}
-                      >
-                        {link.Techsubmenu.map((TechsubmenuItem, id) => (
-                          <li key={id}>
-                            <NavLink
-                              to={TechsubmenuItem.path || "#"}
-                              className={({ isActive }) =>
-                                `block px-6 py-4 text-[14px] hover:bg-Primary hover:text-white font-Secondary tracking-wider uppercase font-semibold border-b-[1px] border-[#00000018] ${isActive ? "text-Primary" : "text-gray-700"
-                                }`
-                              }
-                              onClick={() => window.scrollTo(0, 0)}
-                            >
-                              {TechsubmenuItem.name}
-                            </NavLink>
+                        {link.submenu.map((submenuCategory, id) => (
+                          <li key={id} className="px-8 py-6 border-r-[1px]">
+                            <h3 className="text-[18px] font-semibold text-gray-800 font-Secondary uppercase pb-[10px] tracking-wider">{submenuCategory.name}</h3>
+                            <ul>
+                              {submenuCategory.items.map((submenuItem, subId) => (
+                                <li key={subId}>
+                                  <NavLink
+                                    className={({ isActive }) =>
+                                      `block text-[14px] py-[10px]  font-Secondary tracking-wider font-semibold  text-gray-700
+                                      }`
+                                    }
+                                    onClick={() => window.scrollTo(0, 0)}
+                                  >
+                                    {submenuItem.name}
+                                  </NavLink>
+                                </li>
+                              ))}
+                            </ul>
                           </li>
                         ))}
                       </ul>
@@ -158,7 +168,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
             <li key={index} className="text-center px-[10px] py-[20px] uppercase font-semibold text-gray-700 hover:text-Primary duration-200 border-b-[1px] border-dotted border-[#0000003d]">
               <NavLink to={link.path || "#"} className={({ isActive }) => ` ${isActive ? "text-Primary" : ""} `} onClick={() => {
                 setMobileMenuOpen(false);
-                window.scrollTo(0, 0); 
+                window.scrollTo(0, 0);
               }}>{link.name}</NavLink>
             </li>
           ))}

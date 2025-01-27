@@ -11,10 +11,10 @@ const About = () => {
         <>
             <AboutUsPage />
             <Aboutthi />
-            {/* <Directors /> */}
-            {/* <Discuss /> */}
-            {/* <VisionMission /> */}
-             {/* <Count /> */}
+            <Directors />
+            <Discuss />
+            <VisionMission />
+             <Count />
         </>
     )
 }
