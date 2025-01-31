@@ -39,12 +39,12 @@ const Choose = () => {
             <section className='py-[60px] xl:py-[100px] bg-[#7c78781a]'>
                 <div className="container">
                     <div className="row">
-                        <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] font-Primary font-bold mb-[50px] uppercase tracking-wider text-center xl:text-start px-[10px]">
+                        <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] font-Primary font-bold mb-[50px] uppercase tracking-wider text-center xl:text-start px-[10px] wow animate__animated animate__zoomIn">
                             <h2>Why Choose The Hidden ideas?</h2>
                         </div>
                         <div className="flex flex-wrap justify-center w-full xl:gap-[20px] ">
                             {chooseData.map((choose, index) => (
-                                <div className="w-full md:w-6/12 xl:w-3/12 p-[10px] xl:p-0">
+                                <div className="w-full md:w-6/12 xl:w-3/12 p-[10px] xl:p-0 wow animate__animated animate__zoomIn">
                                     <div key={index} className=" p-[30px] md:aspect-[1.5/1] lg:aspect-[1.5/.7] xl:aspect-[1.5/1.5] 3xl:aspect-auto relative bg-white shadow-chooseBox z-[2] rounded-xl overflow-hidden hover:text-white hover:transition-all hover:duration-[0.5s] before:absolute before:w-full before:left-0 before:right-0 before:bottom-0  before:top-auto before:h-0 before:bg-Primary before:z-[-1] before:transition-all before:duration-[0.5s] hover:before:h-[100%] ">
                                         <span className='text-[16px] md:text-[14px] lg:text-[20px] 2xl:text-[24px] font-Secondary'>{choose.number}</span>
                                         <h3 className=' text-[20px] md:text-[18px] lg:text-[22px] 2xl:text-[28px] pb-[10px] font-Secondary font-normal'>{choose.title}</h3>

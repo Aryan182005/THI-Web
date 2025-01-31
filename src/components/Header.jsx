@@ -20,8 +20,8 @@ const navLinks = [
       {
         name: "Front End",
         items: [
-          { name: "Angular" },
           { name: "React" },
+          { name: "Angular" },
           { name: "Next JS" },
           { name: "Vue" },
         ],
@@ -29,8 +29,8 @@ const navLinks = [
       {
         name: "Back End",
         items: [
-          { name: "Node" },
           { name: "Php" },
+          { name: "Node" },
           { name: "Python"},
           { name: "Java"},
         ],
@@ -39,15 +39,16 @@ const navLinks = [
         name: "Frameworks",
         items: [
           { name: "Codeigniter" },
-          { name: "WordPress" },
           { name: "Laravel"},
           { name: "Cake Php" },
+          { name: "Tailwind CSS" },
         ],
       },
       {
         name: "Mobile",
         items: [
           { name: "React Native"},
+          { name: "Flutter (Dart)"},
           { name: "Android"},
           { name: "iOS"},
         ],
@@ -110,7 +111,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
                     </NavLink>
                     {link.submenu && (
                       <ul
-                        className={`flex absolute left-0 right-0 top-full bg-white shadow-process w-max z-10 overflow-hidden transition-all duration-300 ease-in-out  ${dropdownOpenIndex === index ? "max-h-[500px]" : "max-h-0"
+                        className={`flex absolute left-0 right-0 top-full bg-white shadow-process w-max z-10 overflow-hidden transition-all duration-300 ease-in-out rounded-lg  ${dropdownOpenIndex === index ? "max-h-[500px]" : "max-h-0"
                           }`}
                         style={{
                           transition: "max-height 0.4s ease-in-out",

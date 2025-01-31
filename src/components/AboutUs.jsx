@@ -28,11 +28,11 @@ const AboutUs = () => {
             <section className='pt-[70px] pb-[50px] bg-[#1173b942] hidden lg:block'>
                 <div className="container">
                     <div className="row">
-                        <div className="heading flex justify-center text-[38px] font-Secondary font-semibold mb-[40px] uppercase tracking-widest">
+                        <div className="heading flex justify-center text-[38px] font-Secondary font-semibold mb-[40px] uppercase tracking-widest wow animate__animated animate__zoomIn">
                             <h2>What is The Hidden Ideas?</h2>
                         </div>
                         <div className="flex w-full flex-wrap">
-                            <div className="w-full lg:w-6/12 flex flex-col justify-center xl:justify-end flex-wrap">
+                            <div className="w-full lg:w-6/12 flex flex-col justify-center xl:justify-end flex-wrap wow animate__animated animate__zoomIn">
                                 <svg x="0px" y="0px"
                                     viewBox="0 0 750 500" fill="enable-background:new 0 0 500 500" className=' w-[480px] xl:w-[580px] 2xl:w-[670px] 3xl:w-[800px] h-[500px] xl:h-[650px] 2xl:h-[670px] 3xl:h-[600px]'>
                                     <g id="Background_Complete">
@@ -2928,11 +2928,11 @@ const AboutUs = () => {
                                 </svg>
                             </div>
                             <div className="w-full lg:w-6/12 p-[20px] 3xl:p-[40px] flex flex-col justify-center text-center xl:text-start">
-                                <h3 className='text-[28px] xl:text-[36px] 3xl:text-[42px] font-medium capitalize font-Secondary pb-[20px] xl:pb-[30px]'>Empowering Growth through Cutting Edge Technology</h3>
-                                <p className='pb-[20px] font-Secondary text-[20px]'>In a world driven by rapid innovation. The Hidden Ideas is a place where imagination meets innovation where the most transformative concepts are born.This is a place where bold ideas emerge through the power of technology, This is not just a space for ideas, it is a sanctuary for growth, powered by the latest technological breakthroughs. With a relentless pursuit of the unseen, we explore unknown possibilities and craft solutions that push boundaries. By embracing cutting-edge technology, we accelerate evolution, igniting progress that transforms businesses, communities and industries for a future that is not only bright but infinite.</p>
+                                <h3 className='text-[28px] xl:text-[36px] 3xl:text-[42px] font-medium capitalize font-Secondary pb-[20px] xl:pb-[30px] wow animate__animated animate__zoomIn'>Empowering Growth through Cutting Edge Technology</h3>
+                                <p className='pb-[20px] font-Secondary text-[20px] wow animate__animated animate__zoomIn'>In a world driven by rapid innovation. The Hidden Ideas is a place where imagination meets innovation where the most transformative concepts are born.This is a place where bold ideas emerge through the power of technology, This is not just a space for ideas, it is a sanctuary for growth, powered by the latest technological breakthroughs. With a relentless pursuit of the unseen, we explore unknown possibilities and craft solutions that push boundaries. By embracing cutting-edge technology, we accelerate evolution, igniting progress that transforms businesses, communities and industries for a future that is not only bright but infinite.</p>
                                 <ul className='w-full flex gap-[10px]'>
                                     {aboutBox.map((aboutBox, index) => (
-                                        <li key={index} className='w-4/12 flex flex-col items-center justify-center h-full py-[35px] px-[25px] bg-white rounded-lg'>
+                                        <li key={index} className='w-4/12 flex flex-col items-center justify-center h-full py-[35px] px-[25px] bg-white rounded-lg wow animate__animated animate__zoomIn'>
                                             <img src={aboutBox.image} alt="" className='w-[20%] pb-[20px]' />
                                             <h3 className='uppercase font-Secondary'>{aboutBox.title}</h3>
                                         </li>
@@ -2946,23 +2946,23 @@ const AboutUs = () => {
             <section className='py-[50px] bg-[#1173b942] block lg:hidden'>
                 <div className="container">
                     <div className="row">
-                        <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] font-Secondary font-semibold mb-0 sm:mb-[20px]  uppercase tracking-wider text-center px-[10px]">
+                        <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] font-Secondary font-semibold mb-0 sm:mb-[20px]  uppercase tracking-wider text-center px-[10px] wow animate__animated animate__zoomIn">
                             <h2>What is The Hidden Ideas?</h2>
                         </div>
                         <div className="flex w-full flex-wrap">
                             <div className="w-full p-[20px] 3xl:p-[40px] flex flex-col justify-center text-center lg:text-start pb-[50px] ">
-                                <h3 className='text-[20px] md:text-[28px]  font-medium capitalize font-Secondary pb-[30px]'>Empowering Growth through Cutting Edge Technology</h3>
-                                <p className='pb-[20px] font-Secondary text-[12px] sm:text-[16px]'>In a world driven by rapid innovation. The Hidden Ideas is a place where imagination meets innovation where the most transformative concepts are born.This is a place where bold ideas emerge through the power of technology, This is not just a space for ideas, it is a sanctuary for growth, powered by the latest technological breakthroughs. With a relentless pursuit of the unseen, we explore unknown possibilities and craft solutions that push boundaries. By embracing cutting-edge technology, we accelerate evolution, igniting progress that transforms businesses, communities and industries for a future that is not only bright but infinite.</p>
+                                <h3 className='text-[20px] md:text-[28px]  font-medium capitalize font-Secondary pb-[30px] wow animate__animated animate__zoomIn'>Empowering Growth through Cutting Edge Technology</h3>
+                                <p className='pb-[20px] font-Secondary text-[12px] sm:text-[16px] wow animate__animated animate__zoomIn'>In a world driven by rapid innovation. The Hidden Ideas is a place where imagination meets innovation where the most transformative concepts are born.This is a place where bold ideas emerge through the power of technology, This is not just a space for ideas, it is a sanctuary for growth, powered by the latest technological breakthroughs. With a relentless pursuit of the unseen, we explore unknown possibilities and craft solutions that push boundaries. By embracing cutting-edge technology, we accelerate evolution, igniting progress that transforms businesses, communities and industries for a future that is not only bright but infinite.</p>
                                 <ul className='w-full flex gap-[10px]'>
                                     {aboutBox.map((aboutBox, index) => (
-                                        <li key={index} className='w-4/12 flex flex-col items-center justify-center h-full py-[20px] sm:py-[35px] px-[15px] sm:px-[25px] bg-white rounded-lg'>
+                                        <li key={index} className='w-4/12 flex flex-col items-center justify-center h-full py-[20px] sm:py-[35px] px-[15px] sm:px-[25px] bg-white rounded-lg wow animate__animated animate__zoomIn'>
                                             <img src={aboutBox.image} alt="" className='w-[40%] md:w-[20%] pb-[20px]' />
                                             <h3 className='uppercase font-Secondary text-[12px] sm:text-[14px] md:text-[16px]'>{aboutBox.title}</h3>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
-                            <div className="w-full xl:w-6/12 flex flex-col justify-end flex-wrap">
+                            <div className="w-full xl:w-6/12 flex flex-col justify-end flex-wrap wow animate__animated animate__zoomIn">
                                 <svg x="0px" y="0px"
                                     viewBox="0 0 750 500" fill="enable-background:new 0 0 500 500" className='w-full  h-full '>
                                     <g id="Background_Complete">

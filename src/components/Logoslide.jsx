@@ -90,16 +90,16 @@ const Logoslide = () => {
     <>
       <section className='border-b-[1px] border-dotted border-[#0000005c] '>
         <div className="row">
-          <ul className='flex overflow-hidden py-[40px] bg-white relative before:absolute before:top-0 before:w-[250px] before:h-[100%] before:z-[2] before:left-0 before:bg-custom-gradient border-b-[1px] border-dotted border-[#0000005c]'>
+          <ul className='flex overflow-hidden py-[40px] bg-white relative before:absolute before:top-0 before:w-[250px] before:h-[100%] before:z-[2] before:left-0 before:bg-custom-gradient border-b-[1px] border-dotted border-[#0000005c] wow animate__animated animate__fadeInRightBig'>
             <Marquee direction='left' speed={100} className='relative'>
               {logoImage.map((logoImage, index) => (
-                <li key={index}>
+                <li key={index} >
                   <img src={logoImage.Logo} className='mx-[40px]' />
                 </li>
               ))}
             </Marquee>
           </ul>
-          <ul className='flex overflow-hidden py-[40px] bg-white relative after:absolute after:top-0 after:w-[250px] after:h-[100%] after:z-[2] after:right-0 after:bg-custom-gradient2'>
+          <ul className='flex overflow-hidden py-[40px] bg-white relative after:absolute after:top-0 after:w-[250px] after:h-[100%] after:z-[2] after:right-0 after:bg-custom-gradient2 wow animate__animated animate__fadeInLeftBig'>
             <Marquee direction='right' speed={100}>
               {logoImage.map((logoImage, index) => (
                 <li key={index}>
@@ -110,9 +110,6 @@ const Logoslide = () => {
           </ul>
         </div>
       </section>
-
-
-
     </>
   )
 }

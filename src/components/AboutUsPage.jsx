@@ -2047,7 +2047,7 @@ const AboutUsPage = () => {
                             </div>
                             <div className="w-6/12 flex flex-col justify-center">
                                 <h2 className='text-[70px] 3xl:text-[80px] uppercase font-Secondary font-semibold 2xl:pb-[20px]'>About Us</h2>
-                                <h4 className='text-[30px] 3xl:text-[34px] font-Secondary font-medium pb-[10px] capitalize'>Turning Your Ideas Into Scalable Solutions</h4>
+                                <h4 className='text-[30px] 3xl:text-[34px] font-Secondary font-medium pb-[10px] capitalize'>"Turning Your Ideas Into Scalable Solutions"</h4>
                                 <p className='text-[20px] font-Secondary'>At The Hidden Ideas, we provide innovative solutions for businesses. Our team specializes in Web & Mobile app development, & software development. We’re dedicated to delivering reliable, scalable & cost-effective solutions tailored to each client. Partner with us for success.</p>
                                 <div className="pt-[30px] flex justify-center xl:justify-start">
                                     <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
@@ -2067,7 +2067,7 @@ const AboutUsPage = () => {
                         <div className="w-full flex flex-wrap">
                             <div className="w-full flex flex-col justify-center text-center pb-[30px]">
                                 <h2 className='text-[40px] sm:text-[46px] md:text-[60px] lg:text-[70px] uppercase font-Secondary font-semibold 2xl:pb-[20px]'>About Us</h2>
-                                <h4 className='text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] font-Secondary font-medium pb-[10px] capitalize'>Turning Your Ideas Into Scalable Solutions</h4>
+                                <h4 className='text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] font-Secondary font-medium pb-[10px] capitalize'>"Turning Your Ideas Into Scalable Solutions"</h4>
                                 <p className='text-[16px] sm:text-[20px] font-Secondary'>At The Hidden Ideas, we provide innovative solutions for businesses. Our team specializes in Web & Mobile app development, & software development. We’re dedicated to delivering reliable, scalable & cost-effective solutions tailored to each client. Partner with us for success.</p>
                                 <div className="pt-[30px] flex justify-center xl:justify-start">
                                     <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">

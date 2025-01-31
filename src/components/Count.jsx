@@ -7,7 +7,7 @@ const Count = () => {
     const Card = ({ value, title }) => {
         return (
             <div className="w-full sm:w-6/12 lg:w-3/12 ">
-                <div className="shadow-sm rounded-t-2xl py-[40px]  flex flex-col items-center transform transition-all duration-300   relative overflow-hidden z-1   ">
+                <div className="shadow-sm rounded-t-2xl py-[40px]  flex flex-col items-center transform transition-all duration-300   relative overflow-hidden z-1   wow animate__animated animate__zoomIn">
                     <CountUp
                         start={0}
                         end={value}

@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './page/About';
 import ScrollToTop from './components/ScrollToTop';
+import ServicePage from './page/ServicePage';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/service" element={<ServicePage />} />
         </Routes>
         <Footer />
       </div>
