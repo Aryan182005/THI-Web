@@ -20,11 +20,6 @@ const Footer = () => {
             path: "/service",
         },
         {
-            id: 3,
-            FLink: 'Technologies',
-            path: "/technologies",
-        },
-        {
             id: 4,
             FLink: 'Career',
             path: "/career",
@@ -34,6 +29,11 @@ const Footer = () => {
             FLink: 'Company',
             path: "/company",
         },
+        {
+            id: 3,
+            FLink: 'Contact',
+            path: "/contact",
+        },  
     ]
 
     const serviceLinks = [

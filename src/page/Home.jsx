@@ -6,7 +6,7 @@ import Service from '../components/Service'
 import Logoslide from '../components/Logoslide'
 import Process from '../components/Process'
 import Count from '../components/Count'
-import Choose from '../components/Choose'
+import Choose from '../components/Choose'   
 import Testimonial from '../components/Testimonial'
 import Clientlogo from '../components/Clientlogo'
 

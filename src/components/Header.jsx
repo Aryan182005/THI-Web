@@ -31,15 +31,15 @@ const navLinks = [
         items: [
           { name: "Php" },
           { name: "Node" },
-          { name: "Python"},
-          { name: "Java"},
+          { name: "Python" },
+          { name: "Java" },
         ],
       },
       {
         name: "Frameworks",
         items: [
           { name: "Codeigniter" },
-          { name: "Laravel"},
+          { name: "Laravel" },
           { name: "Cake Php" },
           { name: "Tailwind CSS" },
         ],
@@ -47,21 +47,21 @@ const navLinks = [
       {
         name: "Mobile",
         items: [
-          { name: "React Native"},
-          { name: "Flutter (Dart)"},
-          { name: "Android"},
-          { name: "iOS"},
+          { name: "React Native" },
+          { name: "Flutter (Dart)" },
+          { name: "Android" },
+          { name: "iOS" },
         ],
       },
     ],
   },
   {
-    name: "TECHNOLOGIES",
-    path: "/technologies",
-  },
-  {
     name: "Company",
     path: "/company",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
   },
 ];
 

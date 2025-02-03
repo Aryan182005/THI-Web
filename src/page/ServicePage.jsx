@@ -11,8 +11,8 @@ const ServicePage = () => {
     <>
     <ServiceSec />
     <Service />
-    <Features />
     <Logoslide />
+    <Features />
     <Process />
     <Clientlogo />
     </>
