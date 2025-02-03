@@ -9,11 +9,11 @@ const VisionMission = () => {
           <div className="row">
             <div className="w-full flex flex-wrap">
               <div className="w-full lg:w-6/12 flex flex-col justify-center text-center lg:text-start pb-[30px]">
-                <h2 className='text-[30px] sm:text-[38px] lg:text-[70px] font-Secondary font-semibold uppercase'>Our Vision</h2>
-                <h6 className='font-Secondary font-medium text-[20px] sm:text-[24px] lg:text-[30px] xl:text-[36px]  3xl:text-[44px]capitalize'>"Where Vision Meets Reality."</h6>
-                <p className='text-[14px] sm:text-[18px] lg:text-[20px] font-Secondary pt-[10px]'>At the heart of our vision is a commitment to driving transformation through collaboration, creativity, and a shared belief in progress. We envision a world where opportunities are limitless and everyone can thrive.</p>
+                <h2 className='text-[30px] sm:text-[38px] lg:text-[70px] font-Secondary font-semibold uppercase wow animate__animated animate__zoomIn'>Our Vision</h2>
+                <h6 className='font-Secondary font-medium text-[20px] sm:text-[24px] lg:text-[30px] xl:text-[36px]  3xl:text-[44px]capitalize wow animate__animated animate__zoomIn'>"Where Vision Meets Reality."</h6>
+                <p className='text-[14px] sm:text-[18px] lg:text-[20px] font-Secondary pt-[10px] wow animate__animated animate__zoomIn'>At the heart of our vision is a commitment to driving transformation through collaboration, creativity, and a shared belief in progress. We envision a world where opportunities are limitless and everyone can thrive.</p>
               </div>
-              <div className="w-full lg:w-6/12 flex justify-center">
+              <div className="w-full lg:w-6/12 flex justify-center wow animate__animated animate__zoomIn">
                 <svg version="1.1" x="0px" y="0px" viewBox="0 0 500 500" fill="enable-background:new 0 0 500 500" className='w-full  lg:w-[450px] 2xl:w-[600px] h-full lg:h-[450px] 2xl:h-[600px]'>
                   <g id="City">
                     <g id="City_00000119080150402608212540000014484362571762083214_">
@@ -2448,7 +2448,7 @@ const VisionMission = () => {
         <div className="container">
           <div className="row">
             <div className="w-full flex flex-wrap">
-              <div className="w-full lg:w-6/12 flex justify-center text-center lg:text-start pb-[30px]">
+              <div className="w-full lg:w-6/12 flex justify-center text-center lg:text-start pb-[30px] wow animate__animated animate__zoomIn">
                 <svg version="1.1" x="0px" y="0px" viewBox="0 0 500 500" fill="enable-background:new 0 0 500 500" className='w-full  lg:w-[450px] 2xl:w-[600px] h-full lg:h-[450px] 2xl:h-[600px]'>
                   <g id="Floor">
                     <path id="Floor_00000170986591638029143960000006007851074611211694_" fill="#FAFAFA" d="M81.012,439.555
@@ -4496,9 +4496,9 @@ const VisionMission = () => {
                 </svg>
               </div>
               <div className="w-full lg:w-6/12 flex flex-col justify-center text-center lg:text-start">
-                <h2 className='text-[30px] sm:text-[38px] lg:text-[70px] font-Secondary font-semibold uppercase'>Our Mission</h2>
-                <h6 className='font-Secondary font-medium text-[20px] sm:text-[24px] lg:text-[30px] xl:text-[36px] 3xl:text-[44px] capitalize'>"Together, We Build a Better Future."</h6>
-                <p className='text-[14px] sm:text-[18px] lg:text-[20px] font-Secondary pt-[10px]'>Our mission is to create meaningful, sustainable change by providing innovative solutions and fostering a culture of collaboration.  and drive progress in every project we undertake. We are dedicated to exceeding expectations and delivering results that matter</p>
+                <h2 className='text-[30px] sm:text-[38px] lg:text-[70px] font-Secondary font-semibold uppercase wow animate__animated animate__zoomIn'>Our Mission</h2>
+                <h6 className='font-Secondary font-medium text-[20px] sm:text-[24px] lg:text-[30px] xl:text-[36px] 3xl:text-[44px] capitalize wow animate__animated animate__zoomIn'>"Together, We Build a Better Future."</h6>
+                <p className='text-[14px] sm:text-[18px] lg:text-[20px] font-Secondary pt-[10px] wow animate__animated animate__zoomIn'>Our mission is to create meaningful, sustainable change by providing innovative solutions and fostering a culture of collaboration.  and drive progress in every project we undertake. We are dedicated to exceeding expectations and delivering results that matter</p>
               </div>
             </div>
           </div>

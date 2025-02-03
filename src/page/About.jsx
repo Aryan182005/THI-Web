@@ -14,7 +14,7 @@ const About = () => {
             <Directors />
             <Discuss />
             <VisionMission />
-             <Count />
+            <Count />
         </>
     )
 }

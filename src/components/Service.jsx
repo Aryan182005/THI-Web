@@ -141,7 +141,7 @@ const Service = () => {
                   >
                     <div className="w-[128px] h-[128px] bg-Primary z-[1] absolute top-[-75px] right-[390px] rounded-[50%] transition-all duration-[0.5s] ease-in group-hover:scale-[10]"></div>
                     <div className="relative z-[2]">
-                      <div className="flex justify-center mb-[20px]">
+                      <div className="flex justify-center mb-[20px] wow animate__animated animate__zoomIn">
                         <div className="w-[80px] 2xl:w-[100px] 3xl:w-[120px] h-[80px] 2xl:h-[100px] 3xl:h-[120px] transition-all duration-[0.5s] ease-in bg-Primary group-hover:bg-white p-[30px] rounded-full transition-colors duration-300  relative">
                           <img
                             src={service.image}
@@ -155,10 +155,10 @@ const Service = () => {
                                                     />
                         </div>
                       </div>
-                      <h5 className="text-[22px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] font-Secondary pb-[10px] 2xl:pb-[20px] transition-all duration-[0.7s] group-hover:text-white">
+                      <h5 className="text-[22px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] font-Secondary pb-[10px] 2xl:pb-[20px] transition-all duration-[0.7s] group-hover:text-white wow animate__animated animate__zoomIn">
                         {service.title}
                       </h5>
-                      <p className="text-[16px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-Secondary  transition-all duration-[0.7s] group-hover:text-white">
+                      <p className="text-[16px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-Secondary  transition-all duration-[0.7s] group-hover:text-white wow animate__animated animate__zoomIn">
                         {service.decription}
                       </p>
                     </div>

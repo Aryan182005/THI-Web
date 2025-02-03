@@ -73,12 +73,12 @@ const Testimonial = () => {
         </div>
         <Slider {...settings}>
           {testimoialsData.map((Testimonial, index) => (
-            <div className="w-4/12 px-[10px] 2xl:px-[20px] wow animate__animated animate__zoomIn">
+            <div className="w-4/12 px-[10px] 2xl:px-[20px] ">
               <div
                 key={index}
                 className="relative overflow-hidden border-[3px] border-Primary p-[30px] rounded-2xl transition-all duration-[0.5s] hover:text-white before:absolute before:w-0 before:h-full before:top-0 before:bg-custom-gradient3 before:rounded-2xl before:bottom-0 before:left-auto before:right-0  before:duration-[0.5s] hover:before:w-[100%]  before:blur-2xl before:z-[-1]  after:absolute after:w-0 after:h-full after:top-0 after:bg-custom-gradient3 after:rounded-2xl after:bottom-0 after:left-0 after:right-auto  after:duration-[0.5s] hover:after:w-[100%] after:rotate-[180deg]  after:blur-2xl after:z-[-1]"
               >
-                <div className="flex w-[12%] mb-[30px]">
+                <div className="flex w-[12%] mb-[30px] wow animate__animated animate__zoomIn">
                   <img
                     src={Testimonial.image}
                     alt=""
@@ -86,11 +86,11 @@ const Testimonial = () => {
                   />
                 </div>
                 <div className="">
-                  <h3 className="text-[26px]">{Testimonial.Title}</h3>
-                  <h5 className="pb-[30px] text-[18px]">
+                  <h3 className="text-[26px] wow animate__animated animate__zoomIn">{Testimonial.Title}</h3>
+                  <h5 className="pb-[30px] text-[18px] wow animate__animated animate__zoomIn">
                     {Testimonial.subTitle}
                   </h5>
-                  <p>{Testimonial.descroption}</p>
+                  <p className="wow animate__animated animate__zoomIn">{Testimonial.descroption}</p>
                 </div>
               </div>
             </div>

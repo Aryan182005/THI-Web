@@ -33,9 +33,6 @@ const Features = () => {
             <section className='py-[50px] lg:py-[100px] border-b-[1px] border-dotted border-[#0000005c]'>
                 <div className="container">
                     <div className="row">
-                        {/* <div className="heading flex justify-center text-[38px] font-Primary font-bold mb-[40px] uppercase tracking-wider">
-                            <h2>key features</h2>
-                        </div> */}
                         <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] font-Secondary font-semibold mb-[40px] uppercase tracking-widest text-center md:text-start wow animate__animated animate__zoomIn">
                             <h2>key features</h2>
                         </div>
@@ -44,8 +41,8 @@ const Features = () => {
                                 <div className="w-full md:w-6/12 xl:w-4/12 3xl:w-3/12 wow animate__animated animate__zoomIn" key={index}>
                                     <div className="bg-[#1173b942] m-[10px] p-[20px] 2xl:p-[30px] rounded-xl relative overflow-hidden group aspect-[1/0.7] sm:aspect-[1/0.4] md:aspect-[1/0.9] lg:aspect-[1/0.6] xl:aspect-[1/0.9] 2xl:aspect-[1/0.7]">
                                         <div className="w-[128px] h-[128px] bg-Primary -z-[1] absolute top-[-75px] right-[-75px] rounded-[50%] transition-all duration-[0.5s] ease-in group-hover:scale-[10]"></div>
-                                        <h2 className='text-[24px] sm:text-[26px] md:text-[32px] font-Secondary pb-[10px] font-semibold  transition-all duration-[0.7s] group-hover:text-white'>{features.title}</h2>
-                                        <p className='text-[16px] md:text-[18px] font-Secondary transition-all duration-[0.7s] group-hover:text-white'>{features.description}</p>
+                                        <h2 className='text-[24px] sm:text-[26px] md:text-[32px] font-Secondary pb-[10px] font-semibold  transition-all duration-[0.7s] group-hover:text-white wow animate__animated animate__zoomIn'>{features.title}</h2>
+                                        <p className='text-[16px] md:text-[18px] font-Secondary transition-all duration-[0.7s] group-hover:text-white wow animate__animated animate__zoomIn'>{features.description}</p>
                                     </div>
                                 </div>
                             ))}

@@ -26,7 +26,7 @@ const OurTeam = () => {
             image: Team,
             name: "Jeet Gondaliya",
             Category: "Php, Laravel Devloper",
-            dev: "Jr. ",
+            dev: "Sr. ",
         },
         {
             image: Team,
@@ -58,7 +58,7 @@ const OurTeam = () => {
                         </div>
                         <div className=" w-full flex flex-wrap justify-center gap-[30px] sm:gap-[50px]">
                             {teamData.map((Team, index) => (
-                                <div key={index} className="group p-[20px] bg-[#1173b942] relative w-[330px] sm:w-[470px] md:w-[320px] lg:w-[400px] h-[350px] sm:h-[370px] md:h-[370px] lg:h-[400px] rounded-lg shadow-md  before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-lg before:bg-[#1173b942] before:duration-[0.5s] before:-z-[1] hover:before:rotate-[20deg] hover:before:shadow-xl after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-lg after:bg-[#1173b942] after:duration-[0.5s] after:-z-[1] hover:after:rotate-[10deg] hover:after:shadow-xl">
+                                <div key={index} className="group wow animate__animated animate__zoomIn p-[20px] bg-[#1173b942] relative w-[330px] sm:w-[470px] md:w-[320px] lg:w-[400px] h-[350px] sm:h-[370px] md:h-[370px] lg:h-[400px] rounded-lg shadow-md  before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-lg before:bg-[#1173b942] before:duration-[0.5s] before:-z-[1] hover:before:rotate-[20deg] hover:before:shadow-xl after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-lg after:bg-[#1173b942] after:duration-[0.5s] after:-z-[1] hover:after:rotate-[10deg] hover:after:shadow-xl">
                                     <div className="flex justify-center pb-[20px]">
                                         <img src={Team.image} className='rounded-full group-hover:scale-[1.1] origin-center transition-all duration-[0.5] overflow-hidden' alt={Team.name}/>
                                     </div>

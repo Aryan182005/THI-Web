@@ -1,13 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Wow from "wow.js";
+import "animate.css";
 
 const AboutUsPage = () => {
+    useEffect(() => {
+        new Wow({
+          live: false,
+        }).init();
+      }, []);
     return (
         <>
             <section className='py-[50px] bg-[#1173b942] hidden xl:block'>
                 <div className="container">
                     <div className="row">
                         <div className="w-full flex">
-                            <div className="w-6/12">
+                            <div className="w-6/12 wow animate__animated animate__zoomIn">
                                 <svg version="1.1" x="0px" y="0px"
                                     viewBox="0 0 750 500" fill="enable-background:new 0 0 750 500" className='w-full lg:w-[450px] xl:w-[550px] 2xl:w-[600px] 3xl:w-[700px] h-full lg:h-[450px] xl:h-[550px] 2xl:h-[600px] 3xl:h-[720px]'>
                                     <g id="Background_Complete">
@@ -2046,10 +2053,10 @@ const AboutUsPage = () => {
                                 </svg>
                             </div>
                             <div className="w-6/12 flex flex-col justify-center">
-                                <h2 className='text-[70px] 3xl:text-[80px] uppercase font-Secondary font-semibold 2xl:pb-[20px]'>About Us</h2>
-                                <h4 className='text-[30px] 3xl:text-[34px] font-Secondary font-medium pb-[10px] capitalize'>"Turning Your Ideas Into Scalable Solutions"</h4>
-                                <p className='text-[20px] font-Secondary'>At The Hidden Ideas, we provide innovative solutions for businesses. Our team specializes in Web & Mobile app development, & software development. We’re dedicated to delivering reliable, scalable & cost-effective solutions tailored to each client. Partner with us for success.</p>
-                                <div className="pt-[30px] flex justify-center xl:justify-start">
+                                <h2 className='text-[70px] 3xl:text-[80px] uppercase font-Secondary font-semibold 2xl:pb-[20px] wow animate__animated animate__zoomIn'>About Us</h2>
+                                <h4 className='text-[30px] 3xl:text-[34px] font-Secondary font-medium pb-[10px] capitalize wow animate__animated animate__zoomIn'>"Turning Your Ideas Into Scalable Solutions"</h4>
+                                <p className='text-[20px] font-Secondary wow animate__animated animate__zoomIn'>At The Hidden Ideas, we provide innovative solutions for businesses. Our team specializes in Web & Mobile app development, & software development. We’re dedicated to delivering reliable, scalable & cost-effective solutions tailored to each client. Partner with us for success.</p>
+                                <div className="pt-[30px] flex justify-center xl:justify-start wow animate__animated animate__zoomIn">
                                     <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
                                         Join us
                                         <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
@@ -2066,17 +2073,17 @@ const AboutUsPage = () => {
                     <div className="row">
                         <div className="w-full flex flex-wrap">
                             <div className="w-full flex flex-col justify-center text-center pb-[30px]">
-                                <h2 className='text-[40px] sm:text-[46px] md:text-[60px] lg:text-[70px] uppercase font-Secondary font-semibold 2xl:pb-[20px]'>About Us</h2>
-                                <h4 className='text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] font-Secondary font-medium pb-[10px] capitalize'>"Turning Your Ideas Into Scalable Solutions"</h4>
-                                <p className='text-[16px] sm:text-[18px] md:text-[20px] font-Secondary'>At The Hidden Ideas, we provide innovative solutions for businesses. Our team specializes in Web & Mobile app development, & software development. We’re dedicated to delivering reliable, scalable & cost-effective solutions tailored to each client. Partner with us for success.</p>
-                                <div className="pt-[30px] flex justify-center xl:justify-start">
+                                <h2 className='text-[40px] sm:text-[46px] md:text-[60px] lg:text-[70px] uppercase font-Secondary font-semibold 2xl:pb-[20px] wow animate__animated animate__zoomIn'>About Us</h2>
+                                <h4 className='text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] font-Secondary font-medium pb-[10px] capitalize wow animate__animated animate__zoomIn'>"Turning Your Ideas Into Scalable Solutions"</h4>
+                                <p className='text-[16px] sm:text-[18px] md:text-[20px] font-Secondary wow animate__animated animate__zoomIn'>At The Hidden Ideas, we provide innovative solutions for businesses. Our team specializes in Web & Mobile app development, & software development. We’re dedicated to delivering reliable, scalable & cost-effective solutions tailored to each client. Partner with us for success.</p>
+                                <div className="pt-[30px] flex justify-center xl:justify-start wow animate__animated animate__zoomIn">
                                     <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
                                         Join us
                                         <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
                                     </button>
                                 </div>
                             </div>
-                            <div className="w-full">
+                            <div className="w-full wow animate__animated animate__zoomIn">
                                 <svg version="1.1" x="0px" y="0px"
                                     viewBox="0 0 750 500" fill="enable-background:new 0 0 750 500" className='w-full  h-full '>
                                     <g id="Background_Complete">
