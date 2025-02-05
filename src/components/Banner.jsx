@@ -136,10 +136,10 @@ const Banner = () => {
                       onClick={toggleModal}
                     >
                       <div
-                        className={`flex flex-col gap-[10px] md:gap-[20px] bg-white p-8 w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 3xl:w-5/12 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out animate__animated animate__zoomIn`}
+                        className={`flex flex-col gap-[10px] md:gap-[20px] bg-white p-4 sm:p-8 w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 3xl:w-5/12 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out animate__animated animate__zoomIn`}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <h2 className="text-2xl md:text-3xl font-semibold text-black font-Secondary mb-4 text-center">Let’s Build Together</h2>
+                        <h2 className="text-xl md:text-3xl font-semibold text-black font-Secondary mb-4 text-center">Let’s Build Together</h2>
                         <div className="">
                           <form onSubmit={handleSubmit} className="flex flex-wrap md:p-[20px] justify-center">
                             <div className="text-start w-full md:w-6/12 md:px-[10px] py-[10px] sm:py-[20px] wow animate__animated animate__zoomIn">
