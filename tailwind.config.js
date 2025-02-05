@@ -82,6 +82,10 @@ module.exports = {
           '50%': { transform: 'translateY(-10px)' },
           '100%': { transform: 'translateY(0px)' },
         },
+        zoomInEffect: {
+          '0%': { transform: 'scale(0)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
       },
       animation: {
         slideDown: 'slideDown 1s ease-in-out',
@@ -94,6 +98,7 @@ module.exports = {
         screen1: 'screen1 3s linear infinite',
         screen2: 'screen2 3s linear infinite',
         screen3: 'screen3 3s ease-in-out infinite',
+        zoomIn: 'zoomInEffect 0.5s ease-out forwards',
       },
       transformOrigin: {
         '50-100': '50% 26%',

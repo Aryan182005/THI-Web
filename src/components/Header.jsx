@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import Logo from "../assets/Logo.png";
@@ -68,6 +68,18 @@ const navLinks = [
 const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
   const [dropdownOpenIndex, setDropdownOpenIndex] = useState(null);
 
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    window.scrollTo(0, 0); 
+    setMobileMenuOpen(false); 
+    navigate("/contact");
+    const contactSection = document.getElementById("contact-us");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileMenuOpen(false);
+  };
 
   const handleMouseEnter = (index) => {
     setDropdownOpenIndex(index);
@@ -84,7 +96,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <Link to="/" onClick={() => window.scrollTo(0, 0)}>
             <img src={Logo} alt="Logo" className="h-10 sm:h-[50px] md:h-[65px]" />
           </Link>
-          <div className="flex lg:w-[78%] xl:w-[75%] 2xl:w-[72%] 3xl:w-[68%] justify-between hidden lg:flex items-center">
+          <div className=" lg:w-[78%] xl:w-[75%] 2xl:w-[72%] 3xl:w-[68%] justify-between hidden lg:flex items-center">
             <nav
               className={`${mobileMenuOpen ? "block" : "hidden"}
     lg:flex lg:items-center lg:space-x-6 transition-all duration-300 ease-in-out`}
@@ -143,7 +155,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
                 ))}
               </ul>
             </nav>
-            <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
+            <button  onClick={handleContactClick} class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
               Contact Us
               <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
             </button>
@@ -151,7 +163,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
 
           <div className="hamburger-menu block lg:hidden">
             <Link
-              to="#"
+              to="/contact"
               className="text-[20px]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >

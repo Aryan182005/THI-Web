@@ -8,6 +8,7 @@ import About from './page/About';
 import ScrollToTop from './components/ScrollToTop';
 import ServicePage from './page/ServicePage';
 import CompanyPage from './page/CompanyPage';
+import ContactPage from './page/ContactPage';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<ServicePage />} />
           <Route path="/company" element={<CompanyPage />} />
+          <Route path="/contact" element={<ContactPage/>} />
         </Routes>
         <Footer />
       </div>

@@ -64,7 +64,7 @@ const OurTeam = () => {
                                     </div>
                                     <div className="text-center">
                                         <h2 className='text-[20px] sm:text-[24px] lg:text-[32px] font-bold font-Secondary'><sup>{Team.dev}</sup>{Team.name}</h2>
-                                        <h4 className='text-[16px] sm:text-[20px] lg:text-[24px] font-semibold font-Secondary'>{Team.Category}</h4>
+                                        <h4 className='text-[16px] sm:text-[20px] lg:text-[20px] font-semibold font-Secondary'>{Team.Category}</h4>
                                     </div>
                                 </div>
                             ))}
