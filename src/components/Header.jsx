@@ -163,7 +163,6 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }) => {
 
           <div className="hamburger-menu block lg:hidden">
             <Link
-              to="/contact"
               className="text-[20px]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
