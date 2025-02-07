@@ -3,7 +3,6 @@ import React from 'react'
 const VisionMission = () => {
   return (
     <> 
-    {/* vision desktop and mobile  */}
       <section className='vision py-[50px] bg-[#1173b942] border-b-[1px] border-dotted border-[#000000] px-[20px] sm:px-0'>
         <div className="container">
           <div className="row">
@@ -2443,7 +2442,6 @@ const VisionMission = () => {
         </div>
       </section>
 
-      {/* mission desktop  */}
       <section className='mission py-[50px] bg-[#1173b942] hidden lg:block'>
         <div className="container">
           <div className="row">
@@ -4505,7 +4503,6 @@ const VisionMission = () => {
         </div>
       </section>
 
-      {/* mission mobile  */}
       <section className='mission py-[50px] bg-[#1173b942] block lg:hidden px-[20px] sm:px-0'>
         <div className="container">
           <div className="row">

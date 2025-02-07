@@ -1,13 +1,15 @@
-import React, {useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 import Wow from "wow.js";
 import "animate.css";
 
 const AboutUsPage = () => {
+
     useEffect(() => {
         new Wow({
-          live: false,
+            live: false,
         }).init();
-      }, []);
+    }, []);
+    
     return (
         <>
             <section className='py-[50px] bg-[#1173b942] hidden xl:block'>

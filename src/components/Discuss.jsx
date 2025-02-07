@@ -102,10 +102,12 @@ const Discuss = () => {
     
         if (isOpen) {
           window.addEventListener("keydown", handleKeydown);
+          document.body.style.overflow = "hidden";
         }
     
         return () => {
           window.removeEventListener("keydown", handleKeydown);
+          document.body.style.overflow = "auto";
         };
       });
 

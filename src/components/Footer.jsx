@@ -4,9 +4,20 @@ import location from '../assets/location.png'
 import { TbPhoneCall, TbClockHour4 } from "react-icons/tb";
 import { RiFacebookFill } from "react-icons/ri";
 import { BiLogoLinkedin, BiLogoInstagramAlt, BiLogoSkype } from "react-icons/bi";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink , useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+
+    const navigate = useNavigate();
+
+    const handleContactClick = () => {
+        window.scrollTo(0, 0);  
+        navigate("/contact");
+        const contactSection = document.getElementById("contact-us");
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
 
     const companyLinks = [
         {
@@ -59,24 +70,24 @@ const Footer = () => {
         },
     ]
 
-    const socialLink = [
-        {
-            icon: <RiFacebookFill />,
-            path: "/facebook",
-        },
-        {
-            icon: <BiLogoLinkedin />,
-            path: "/linkdin",
-        },
-        {
-            icon: <BiLogoInstagramAlt />,
-            path: "/instagram",
-        },
-        {
-            icon: <BiLogoSkype />,
-            path: "/skupe",
-        },
-    ]
+        const socialLink = [
+            {
+                icon: <RiFacebookFill />,
+                path: "/facebook",
+            },
+            {
+                icon: <BiLogoLinkedin />,
+                path: "/linkdin",
+            },
+            {
+                icon: <BiLogoInstagramAlt />,
+                path: "/instagram",
+            },
+            {
+                icon: <BiLogoSkype />,
+                path: "skype:live:.cid.981927945f0b7178?chat",
+            },
+        ]
     
     return (
         <>
@@ -145,7 +156,7 @@ const Footer = () => {
                                     <h2 className='uppercase font-Secondary tracking-wider font-semibold text-[24px] 3xl:text-[28px] wow animate__animated animate__zoomIn'>Join Our Newsletter</h2>
                                     <p className='text-[16px] 2xl:text-[18px] 3xl:text-[20px] font-Secondary tracking-wider wow animate__animated animate__zoomIn'>Stay ahead of the tech world with our newsletter! Subscribe to get the latest IT industry insights, tech trends, and expert tips straight to your inbox.</p>
                                     <div className="btn flex justify-center md:justify-start wow animate__animated animate__zoomIn">
-                                        <button class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
+                                        <button onClick={handleContactClick} class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
                                             Get in Touch
                                             <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
                                         </button>

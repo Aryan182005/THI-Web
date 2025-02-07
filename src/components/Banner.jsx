@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { IoClose } from "react-icons/io5";
 import Wow from "wow.js";
 import "animate.css";
 
@@ -52,15 +53,15 @@ const Banner = () => {
     setFormStatus({ isSubmitting: true, successMessage: "", errorMessage: "" });
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000)); 
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
       setFormData({ name: "", phone_no: "", message: "" });
       setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
       setShowModal(true);
       setTimeout(() => {
         setIsOpen(false);
-        setShowModal(false);  
-      }, 2000); 
+        setShowModal(false);
+      }, 2000);
     } catch (error) {
       setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "An error occurred, please try again later." });
       setShowModal(true);
@@ -77,19 +78,22 @@ const Banner = () => {
 
     if (isOpen) {
       window.addEventListener("keydown", handleKeydown);
+      document.body.style.overflow = "hidden";
     } else {
       window.removeEventListener("keydown", handleKeydown);
+      document.body.style.overflow = "auto";
     }
 
     return () => {
       window.removeEventListener("keydown", handleKeydown);
+      document.body.style.overflow = "auto";
     };
-  });
+  }, [isOpen]);
 
 
   const closeModal = () => {
     setShowModal(false);
-};
+  };
 
   const toggleModal = () => {
     if (isOpen) {
@@ -184,13 +188,6 @@ const Banner = () => {
                             </div>
                             <div className="flex justify-center gap-4 sm:gap-8 mt-4 sm:mt-0">
                               <button
-                                onClick={toggleModal}
-                                className="relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px]"
-                              >
-                                Close
-                                <span className="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
-                              </button>
-                              <button
                                 type="submit"
                                 disabled={formStatus.isSubmitting}
                                 className={`relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px] ${formStatus.isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
@@ -200,11 +197,17 @@ const Banner = () => {
                               </button>
                             </div>
                           </form>
+                          <button
+                            onClick={toggleModal}
+                            className="absolute top-0 right-0 flex items-center justify-center  p-2  text-Primary text-3xl "
+                          >
+                            <IoClose />
+                          </button>
                         </div>
                       </div>
                     </div>
                   )}
-                   {showModal && (
+                  {showModal && (
                     <div
                       className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-40 z-50"
                       onClick={closeModal}
