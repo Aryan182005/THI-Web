@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState , useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+    const formRef = useRef();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -56,12 +58,42 @@ const ContactForm = () => {
 
         setFormStatus({ isSubmitting: true, successMessage: "", errorMessage: "" });
 
-        setTimeout(() => {
+        emailjs
+        .sendForm(
+          "service_3b80fzo",    
+          "template_wbn2zir", 
+          formRef.current,
+          "P-OSDlUB9u3dfTODU"
+        )
+        .then(
+          (response) => {
             setFormData({ name: "", email: "", phone_no: "", services: "", message: "" });
             setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
             setShowModal(true);
-        }, 1000);
+          },
+          (error) => {
+            setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "Failed to send message. Try again!" });
+            setShowModal(true);
+            console.error(error);
+          }
+        );
+
+        // setTimeout(() => {
+        //     setFormData({ name: "", email: "", phone_no: "", services: "", message: "" });
+        //     setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
+        //     setShowModal(true);
+        // }, 1000);
     };
+
+    useEffect(() => {
+        if (formStatus.successMessage) {
+            const timer = setTimeout(() => {
+                setShowModal(false);
+                setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "" });
+            }, 2000);
+            return () => clearTimeout(timer);
+        }
+    }, [formStatus.successMessage]);
 
     const closeModal = () => {
         setShowModal(false);
@@ -77,7 +109,7 @@ const ContactForm = () => {
                                 <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] font-Secondary font-semibold mb-[20px] md:mb-[40px] uppercase tracking-widest text-center md:text-start wow animate__animated animate__zoomIn">
                                     <h2>Get In touch</h2>
                                 </div>
-                                <form onSubmit={handleSubmit} className="flex flex-wrap md:p-[20px] justify-center">
+                                <form ref={formRef} onSubmit={handleSubmit} className="flex flex-wrap md:p-[20px] justify-center">
                                     <div className="w-full md:w-6/12 md:px-[10px] py-[20px] wow animate__animated animate__zoomIn">
                                         <label className="font-Secondary">Your Name <span className="text-[#0073e9]">*</span></label>
                                         <input
@@ -150,14 +182,14 @@ const ContactForm = () => {
                                         ></textarea>
                                     </div>
                                     <div className="pt-[20px] wow animate__animated animate__zoomIn">
-                                            <button
-                                                type="submit"
-                                                disabled={formStatus.isSubmitting}
-                                                className={`relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px] ${formStatus.isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                            >
-                                                {formStatus.isSubmitting ? 'Submitting...' : 'Send Message'}
-                                                <span className="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
-                                            </button>
+                                        <button
+                                            type="submit"
+                                            disabled={formStatus.isSubmitting}
+                                            className={`relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px] ${formStatus.isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                        >
+                                            {formStatus.isSubmitting ? 'Submitting...' : 'Send Message'}
+                                            <span className="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -165,35 +197,21 @@ const ContactForm = () => {
                     </div>
                 </div>
                 {showModal && (
-                    <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
-                        {formStatus.errorMessage && (
-                            <div className="bg-white p-6 rounded-lg w-10/12  md:w-3/12 text-center animate-zoomIn">
-                                <h3 className="text-xl text-red-600 font-semibold font-Secondary mb-8">{formStatus.errorMessage}</h3>
-                                <div className="flex justify-center ">
-                                    <button
-                                        onClick={closeModal}
-                                        className={`relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px] ${formStatus.isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                    >
-                                        Close
-                                        <span className="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-                        {formStatus.successMessage && (
-                            <div className="bg-white p-6 rounded-lg w-10/12  md:w-3/12 text-center animate-zoomIn">
-                                <h3 className="text-md md:text-xl text-green-600 font-semibold font-Secondary mb-8">{formStatus.successMessage}</h3>
-                                <div className="flex justify-center ">
-                                    <button
-                                        onClick={closeModal}
-                                        className={`relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px] ${formStatus.isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                    >
-                                        Close
-                                        <span className="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        )}
+                    <div
+                        className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-40 z-50"
+                        onClick={closeModal}
+                    >
+                        <div
+                            className="flex flex-col justify-center items-center p-8  w-9/12 md:w-7/12 lg:w-5/12 3xl:w-3/12 rounded-lg shadow-lg bg-white animate-zoomIn"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {formStatus.errorMessage && (
+                                <div className="text-red-600 font-bold font-Secondary text-[14px] sm:text-xl">{formStatus.errorMessage}</div>
+                            )}
+                            {formStatus.successMessage && (
+                                <div className="text-green-600 font-bold font-Secondary text-[14px] sm:text-xl">{formStatus.successMessage}</div>
+                            )}
+                        </div>
                     </div>
                 )}
             </section>

@@ -44,7 +44,7 @@ const Banner = () => {
     }
 
     if (!validatePhone(formData.phone_no)) {
-      setFormStatus({ errorMessage: "Invalid phone number.", successMessage: "" });
+      setFormStatus({ errorMessage: "Invalid phone number. Enter a valid 10-digit number.", successMessage: "" });
       setShowModal(true);
       return;
     }
@@ -97,7 +97,7 @@ const Banner = () => {
       setTimeout(() => {
         setIsOpen(false);
         setIsClosing(false);
-      }, 500);
+      }, 300);
     } else {
       setIsOpen(true);
     }

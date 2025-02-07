@@ -156,7 +156,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer_bottom py-[30px] flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center px-[30px] lg:px-[50px] border-t-[1px] border-dotted border-[#0000005c]">
-                    <div className="text-[16px] lg:text-[18px] font-Primary font-medium pb-[30px] text-center md:text-start wow animate__animated animate__zoomIn">
+                    <div className="text-[16px] lg:text-[18px] font-Primary font-medium pb-[20px] md:pb-0 text-center md:text-start wow animate__animated animate__zoomIn">
                         Copyright © 2025 <span className='font-bold text-Primary'>The Hidden Ideas.</span> All Rights Reserved
                     </div>
                     <ul className='flex gap-[10px] lg:gap-[20px]'>
