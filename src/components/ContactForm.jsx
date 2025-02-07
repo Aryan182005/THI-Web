@@ -58,31 +58,31 @@ const ContactForm = () => {
 
         setFormStatus({ isSubmitting: true, successMessage: "", errorMessage: "" });
 
-        emailjs
-        .sendForm(
-          "service_3b80fzo",    
-          "template_wbn2zir", 
-          formRef.current,
-          "P-OSDlUB9u3dfTODU"
-        )
-        .then(
-          (response) => {
-            setFormData({ name: "", email: "", phone_no: "", services: "", message: "" });
-            setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
-            setShowModal(true);
-          },
-          (error) => {
-            setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "Failed to send message. Try again!" });
-            setShowModal(true);
-            console.error(error);
-          }
-        );
-
-        // setTimeout(() => {
+        // emailjs
+        // .sendForm(
+        //   "service_3b80fzo",    
+        //   "template_wbn2zir", 
+        //   formRef.current,
+        //   "P-OSDlUB9u3dfTODU"
+        // )
+        // .then(
+        //   (response) => {
         //     setFormData({ name: "", email: "", phone_no: "", services: "", message: "" });
         //     setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
         //     setShowModal(true);
-        // }, 1000);
+        //   },
+        //   (error) => {
+        //     setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "Failed to send message. Try again!" });
+        //     setShowModal(true);
+        //     console.error(error);
+        //   }
+        // );
+
+        setTimeout(() => {
+            setFormData({ name: "", email: "", phone_no: "", services: "", message: "" });
+            setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
+            setShowModal(true);
+        }, 1000);
     };
 
     useEffect(() => {
