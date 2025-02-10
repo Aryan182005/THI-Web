@@ -70,7 +70,7 @@ const Process = () => {
                         </div>
                         <div className=" relative w-full flex flex-wrap">
                             <div className="w-full md:w-6/12 xl:w-3/12 md:py-[40px] md:px-[40px] p-[20px]">
-                                <div className="py-[30px] px-[30px]  text-center bg-white shadow-process rounded-xl border-[3px]  border-Primary aspect-[1.5/1.3] wow animate__animated animate__zoomIn">
+                                <div className="py-[30px] px-[30px]  text-center bg-white dark:bg-black dark:text-white shadow-process rounded-xl border-[3px]  border-Primary aspect-[1.5/1.3] wow animate__animated animate__zoomIn">
                                     <div className="flex justify-center pb-[20px] wow animate__animated animate__zoomIn">
                                         <img src={idea} alt="" className='w-10 h-10' />
                                     </div>
@@ -79,7 +79,7 @@ const Process = () => {
                                 </div>
                             </div>
                             <div className="w-full md:w-6/12 xl:w-3/12 md:py-[40px] md:px-[40px] p-[20px]">
-                                <div className="py-[30px] px-[30px] text-center bg-white shadow-process rounded-xl  border-[3px]  border-Primary aspect-[1.5/1.3] wow animate__animated animate__zoomIn">
+                                <div className="py-[30px] px-[30px] text-center bg-white dark:bg-black dark:text-white shadow-process rounded-xl  border-[3px]  border-Primary aspect-[1.5/1.3] wow animate__animated animate__zoomIn">
                                     <div className="flex justify-center pb-[20px] wow animate__animated animate__zoomIn">
                                         <img src={strategize} alt="" className='w-10 h-10' />
                                     </div>
@@ -88,7 +88,7 @@ const Process = () => {
                                 </div>
                             </div>
                             <div className="w-full md:w-6/12 xl:w-3/12 md:py-[40px] md:px-[40px] p-[20px]">
-                                <div className="py-[30px] px-[30px] text-center bg-white shadow-process rounded-xl  border-[3px]  border-Primary aspect-[1.5/1.3] wow animate__animated animate__zoomIn">
+                                <div className="py-[30px] px-[30px] text-center bg-white dark:bg-black dark:text-white shadow-process rounded-xl  border-[3px]  border-Primary aspect-[1.5/1.3] wow animate__animated animate__zoomIn">
                                     <div className="flex justify-center pb-[20px] wow animate__animated animate__zoomIn">
                                         <img src={build} alt="" className='w-10 h-10' />
                                     </div>
@@ -97,7 +97,7 @@ const Process = () => {
                                 </div>
                             </div>
                             <div className="w-full md:w-6/12 xl:w-3/12 md:py-[40px] md:px-[40px] p-[20px]">
-                                <div className="py-[30px] px-[30px] text-center bg-white shadow-process rounded-xl border-[3px]  border-Primary aspect-[1.5/1.3] wow animate__animated animate__zoomIn">
+                                <div className="py-[30px] px-[30px] text-center bg-white dark:bg-black dark:text-white shadow-process rounded-xl border-[3px]  border-Primary aspect-[1.5/1.3] wow animate__animated animate__zoomIn">
                                     <div className="flex justify-center pb-[20px] wow animate__animated animate__zoomIn">
                                         <img src={lounch} alt="" className='w-10 h-10' />
                                     </div>
