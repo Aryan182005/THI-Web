@@ -5,7 +5,7 @@ import rocket from '../assets/rocket_color.png'
 const Aboutthi = () => {
     return (
         <>
-            <section className='py-[50px] px-[20px] md:px-0'>
+            <section className='py-[50px] px-[20px] md:px-0 bg-[#7c78781a] dark:bg-black dark:text-white'>
                 <div className="container">
                     <div className="row">
                         <div className="w-full ">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { IoClose } from "react-icons/io5";
 import Wow from "wow.js";
 import "animate.css";
+import emailjs from "@emailjs/browser"; 
 
 
 const Discuss = () => {
@@ -61,6 +62,34 @@ const Discuss = () => {
 
         setFormStatus({ isSubmitting: true, successMessage: "", errorMessage: "" });
 
+        // const templateParams = {
+        //     name: formData.name,
+        //     phone_no: formData.phone_no,
+        //     date: scheduleDate,
+        //     time: scheduleTime,
+        // };
+
+        // try {
+        //     await emailjs.send(
+        //         'your_service_id', 
+        //         'your_template_id', 
+        //         templateParams, 
+        //         'your_public_key'
+        //     );
+        //     setFormData({ name: "", phone_no: "" });
+        //     setscheduleDate("dd/MM/yyyy");
+        //     setscheduleTime("00:00");
+        //     setFormStatus({ isSubmitting: false, successMessage: "Meeting scheduled successfully!", errorMessage: "" });
+        //     setShowModal(true);
+        //     setTimeout(() => {
+        //         setIsOpen(false);
+        //         setShowModal(false);
+        //     }, 2000);
+        // } catch (error) {
+        //     setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "An error occurred, please try again later." });
+        //     setShowModal(true);
+        // }
+
         try {
             await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -118,7 +147,7 @@ const Discuss = () => {
 
     return (
         <>
-            <section className=' py-[50px] px-[20px] sm:px-0'>
+            <section className=' py-[50px] px-[20px] sm:px-0 bg-[#7c78781a] dark:bg-black dark:text-white'>
                 <div className="container">
                     <div className="row">
                         <div className="w-full flex flex-wrap xl:flex-nowrap justify-around items-center">
@@ -141,7 +170,7 @@ const Discuss = () => {
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             <h2 className="text-xl md:text-3xl font-semibold text-black font-Secondary mb-4 text-center">Let’s Build Together</h2>
-                                            <div className="">
+                                            <div className="dark:text-black">
                                                 <form onSubmit={handleSubmit} className="flex flex-wrap md:p-[20px] justify-center">
                                                     <div className="text-start w-full md:w-6/12 md:px-[10px] py-[10px] sm:py-[20px] wow animate__animated animate__zoomIn">
                                                         <label className="font-Secondary text-[14px] sm:text-[16px]">Your Name <span className="text-[#0073e9]">*</span></label>
@@ -174,7 +203,7 @@ const Discuss = () => {
                                                             <span className="text-[#0073e9]">*</span></label>
                                                         <br />
                                                         <input
-                                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid border-Primary focus-visible:outline-none"
+                                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid border-Primary focus-visible:outline-none placeholder:text-[#7591B5]"
                                                             type="date"
                                                             name='date'
                                                             value={scheduleDate}
@@ -185,7 +214,7 @@ const Discuss = () => {
                                                     <div className="text-start w-full md:w-6/12 md:px-[10px] py-[10px] sm:py-[20px] wow animate__animated animate__zoomIn">
                                                         <label className="font-Secondary text-[14px] sm:text-[16px]">Schedule Time <span className="text-[#0073e9]">*</span></label>
                                                         <input
-                                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid border-Primary focus-visible:outline-none"
+                                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid border-Primary focus-visible:outline-none placeholder:text-[#7591B5]"
                                                             type="time"
                                                             name='time'
                                                             value={scheduleTime}

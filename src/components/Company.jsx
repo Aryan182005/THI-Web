@@ -11,7 +11,7 @@ const Company = () => {
       }, []);
 	return (
 		<>
-			<section className='py-[50px] px-[20px] sm:px-0 bg-[#1173b942 hidden xl:block'>
+			<section className='py-[50px] px-[20px] sm:px-0 bg-[#1173b942] hidden xl:block'>
 				<div className="container">
 					<div className="row">
 						<div className="w-full flex flex-wrap">

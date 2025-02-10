@@ -67,7 +67,7 @@ import person2 from "../assets/gutam.png";
 // Card Component
 const Card = ({ image, name, role }) => {
   return (
-    <div className="group  relative w-[450px] md:w-[300px] lg:w-[400px] h-[400px] sm:h-[550px] md:h-[350px] lg:h-[450px] rounded-lg shadow-md  bg-white before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-lg before:bg-Primary before:duration-[0.5s] before:-z-[1] hover:before:rotate-[20deg] hover:before:shadow-xl after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-lg after:bg-Primary after:duration-[0.5s] after:-z-[1] hover:after:rotate-[10deg] hover:after:shadow-xl">
+    <div className="group  relative w-[450px] md:w-[300px] lg:w-[400px] h-[400px] sm:h-[550px] md:h-[350px] lg:h-[450px] rounded-lg shadow-md  bg-white dark:bg-black dark:text-white before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-lg before:bg-Primary dark:before:bg-black before:duration-[0.5s] before:-z-[1] hover:before:rotate-[20deg] hover:before:shadow-xl after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-lg after:bg-Primary dark:after:bg-black after:duration-[0.5s] after:-z-[1] hover:after:rotate-[10deg] hover:after:shadow-xl">
       <div className="absolute top-[10px] left-[10px] right-[10px] bottom-[10px] bg-[#222] duration-[0.5s] z-[1]   group-hover:bottom-[80px]">
         <img
           src={image}

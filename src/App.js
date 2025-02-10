@@ -12,8 +12,9 @@ import ContactPage from './page/ContactPage';
 import usePreventInspect from './components/usePreventInspect';
 
 function App() {
+  const [isDarkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  usePreventInspect();
+  // usePreventInspect();
 
   return (
     <>

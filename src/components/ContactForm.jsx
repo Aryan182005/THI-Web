@@ -58,31 +58,31 @@ const ContactForm = () => {
 
         setFormStatus({ isSubmitting: true, successMessage: "", errorMessage: "" });
 
-        // emailjs
-        // .sendForm(
-        //   "service_3b80fzo",    
-        //   "template_wbn2zir", 
-        //   formRef.current,
-        //   "P-OSDlUB9u3dfTODU"
-        // )
-        // .then(
-        //   (response) => {
-        //     setFormData({ name: "", email: "", phone_no: "", services: "", message: "" });
-        //     setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
-        //     setShowModal(true);
-        //   },
-        //   (error) => {
-        //     setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "Failed to send message. Try again!" });
-        //     setShowModal(true);
-        //     console.error(error);
-        //   }
-        // );
-
-        setTimeout(() => {
+        emailjs
+        .sendForm(
+          "service_3b80fzo",    
+          "template_wbn2zir", 
+          formRef.current,
+          "P-OSDlUB9u3dfTODU"
+        )
+        .then(
+          (response) => {
             setFormData({ name: "", email: "", phone_no: "", services: "", message: "" });
             setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
             setShowModal(true);
-        }, 1000);
+          },
+          (error) => {
+            setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "Failed to send message. Try again!" });
+            setShowModal(true);
+            console.error(error);
+          }
+        );
+
+        // setTimeout(() => {
+        //     setFormData({ name: "", email: "", phone_no: "", services: "", message: "" });
+        //     setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
+        //     setShowModal(true);
+        // }, 1000);
     };
 
     useEffect(() => {
@@ -101,11 +101,11 @@ const ContactForm = () => {
 
     return (
         <>
-            <section className="py-[50px]">
+            <section className="py-[50px] bg-[#7c78781a] dark:bg-black dark:text-white">
                 <div className="container">
                     <div className="row">
                         <div className="flex justify-center">
-                            <div className="w-full xl:w-10/12 3xl:w-8/12 shadow-custom p-6 sm:p-8 rounded-lg border-[3px]">
+                            <div className="w-full xl:w-10/12 3xl:w-8/12 dark:shadow-chooseBox2 shadow-custom p-6 sm:p-8 rounded-lg border-[3px]">
                                 <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] font-Secondary font-semibold mb-[20px] md:mb-[40px] uppercase tracking-widest text-center md:text-start wow animate__animated animate__zoomIn">
                                     <h2>Get In touch</h2>
                                 </div>
@@ -113,7 +113,7 @@ const ContactForm = () => {
                                     <div className="w-full md:w-6/12 md:px-[10px] py-[20px] wow animate__animated animate__zoomIn">
                                         <label className="font-Secondary">Your Name <span className="text-[#0073e9]">*</span></label>
                                         <input
-                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid border-Primary font-Secondary placeholder:font-Secondary placeholder:font-medium placeholder:text-[#7591B5] focus-visible:outline-none"
+                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid bg-[#7c787800]  dark:bg-black border-Primary font-Secondary placeholder:font-Secondary placeholder:font-medium placeholder:text-[#7591B5] focus-visible:outline-none"
                                             type="text"
                                             placeholder="Name"
                                             name="name"
@@ -126,7 +126,7 @@ const ContactForm = () => {
                                     <div className="w-full md:w-6/12 md:px-[10px] py-[20px] wow animate__animated animate__zoomIn">
                                         <label className="font-Secondary">Your Email <span className="text-[#0073e9]">*</span></label>
                                         <input
-                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid border-Primary font-Secondary placeholder:font-Secondary placeholder:font-medium placeholder:text-[#7591B5] focus-visible:outline-none"
+                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid bg-[#7c787800] dark:bg-black border-Primary font-Secondary placeholder:font-Secondary placeholder:font-medium placeholder:text-[#7591B5] focus-visible:outline-none"
                                             type="email"
                                             placeholder="Email"
                                             name="email"
@@ -139,7 +139,7 @@ const ContactForm = () => {
                                     <div className="w-full md:w-6/12 md:px-[10px] py-[20px] wow animate__animated animate__zoomIn">
                                         <label className="font-Secondary">Phone Number <span className="text-[#0073e9]">*</span></label>
                                         <input
-                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid border-Primary font-Secondary placeholder:font-Secondary placeholder:font-medium placeholder:text-[#7591B5] focus-visible:outline-none"
+                                            className="pt-[20px] pb-[10px] w-full border-b-[2px] border-solid bg-[#7c787800] dark:bg-black border-Primary font-Secondary placeholder:font-Secondary placeholder:font-medium placeholder:text-[#7591B5] focus-visible:outline-none"
                                             type="number"
                                             placeholder="Phone Number"
                                             name="phone_no"
@@ -149,12 +149,11 @@ const ContactForm = () => {
                                             required
                                         />
                                     </div>
-
                                     <div className="w-full md:w-6/12 md:px-[10px] py-[20px] wow animate__animated animate__zoomIn">
                                         <label className="font-Secondary">Your Services <span className="text-[#0073e9]">*</span></label>
                                         <select
                                             name="services"
-                                            className="pt-[20px] pb-[10px] text-[#7591B5] w-full border-b-[2px] border-solid border-Primary font-Secondary font-medium"
+                                            className="pt-[20px] pb-[10px] text-[#7591B5] w-full border-b-[2px] border-solid bg-[#7c787800] dark:bg-black border-Primary font-Secondary font-medium"
                                             value={formData.services}
                                             onChange={handleChange}
                                             disabled={formStatus.isSubmitting}
@@ -178,7 +177,7 @@ const ContactForm = () => {
                                             cols="20"
                                             rows="6"
                                             required
-                                            className="pt-[20px] w-full border-b-[2px] border-solid border-Primary font-Secondary placeholder:font-Secondary placeholder:font-medium placeholder:text-[#7591B5] focus-visible:outline-none"
+                                            className="pt-[20px] w-full border-b-[2px] border-solid bg-[#7c787800] dark:bg-black border-Primary font-Secondary placeholder:font-Secondary placeholder:font-medium placeholder:text-[#7591B5] focus-visible:outline-none"
                                         ></textarea>
                                     </div>
                                     <div className="pt-[20px] wow animate__animated animate__zoomIn">

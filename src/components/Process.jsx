@@ -16,7 +16,7 @@ const Process = () => {
                         </div>
                         <div className="flex flex-col gap-[50px] relative">
                             <div className="flex justify-center w-full relative z-10">
-                                <div className="py-[30px] px-[30px] w-3/12 text-center bg-white shadow-process rounded-xl border-[3px]  border-Primary ">
+                                <div className="py-[30px] px-[30px] w-3/12 text-center bg-white dark:bg-black dark:text-white shadow-process rounded-xl border-[3px]  border-Primary dark:shadow-chooseBox ">
                                     <div className="flex justify-center pb-[20px] wow animate__animated animate__zoomIn">
                                         <img src={idea} alt="" className='w-10 h-10' />
                                     </div>
@@ -25,7 +25,7 @@ const Process = () => {
                                 </div>
                             </div>
                             <div className="flex justify-between items-center w-full relative z-10">
-                                <div className="py-[30px] px-[30px] w-3/12 text-center bg-white shadow-process rounded-xl  border-[3px]  border-Primary ">
+                                <div className="py-[30px] px-[30px] w-3/12 text-center bg-white dark:bg-black dark:text-white shadow-process rounded-xl  border-[3px]  border-Primary dark:shadow-chooseBox ">
                                     <div className="flex justify-center pb-[20px] wow animate__animated animate__zoomIn">
                                         <img src={strategize} alt="" className='w-10 h-10' />
                                     </div>
@@ -35,7 +35,7 @@ const Process = () => {
                                 <div className=" animate-translateY duration-[0.3s] ">
                                     <img src={logo} alt="" className='opacity-[0.4] ' />
                                 </div>
-                                <div className="py-[30px] px-[30px] w-3/12 text-center bg-white shadow-process rounded-xl  border-[3px]  border-Primary ">
+                                <div className="py-[30px] px-[30px] w-3/12 text-center bg-white dark:bg-black dark:text-white shadow-process rounded-xl  border-[3px]  border-Primary dark:shadow-chooseBox ">
                                     <div className="flex justify-center pb-[20px] wow animate__animated animate__zoomIn">
                                         <img src={build} alt="" className='w-10 h-10' />
                                     </div>
@@ -44,7 +44,7 @@ const Process = () => {
                                 </div>
                             </div>
                             <div className="flex justify-center w-full relative z-10">
-                                <div className="py-[30px] px-[30px] w-3/12 text-center bg-white shadow-process rounded-xl border-[3px]  border-Primary">
+                                <div className="py-[30px] px-[30px] w-3/12 text-center bg-white dark:bg-black dark:text-white shadow-process rounded-xl border-[3px]  border-Primary dark:shadow-chooseBox">
                                     <div className="flex justify-center pb-[20px] wow animate__animated animate__zoomIn">
                                         <img src={lounch} alt="" className='w-10 h-10' />
                                     </div>

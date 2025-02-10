@@ -43,10 +43,10 @@ const serviceData = [
 const Service = () => {
   return (
     <>
-      <section className="py-[60px] 2xl:py-[100px] border-b-[1px] border-dotted border-[#0000005c] bg-[#7c78781a]"> 
+      <section className="py-[60px] 2xl:py-[100px] border-b-[1px] border-dotted border-[#0000005c] dark:border-white bg-[#7c78781a] dark:bg-black ">
         <div className="container">
           <div className="row">
-            <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] font-Secondary font-semibold mb-[40px] uppercase tracking-widest text-center md:text-start wow animate__animated animate__zoomIn">
+            <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px] dark:text-white font-Secondary font-semibold mb-[40px] uppercase tracking-widest text-center md:text-start wow animate__animated animate__zoomIn">
               <h2>Innovative IT Services</h2>
             </div>
             <div className="flex w-full flex-wrap xl:flex-nowrap xl:gap-[10px] 2xl:gap-[20px]">
@@ -54,7 +54,7 @@ const Service = () => {
                 <div className="w-full md:w-6/12 xl:w-4/12 p-[10px] xl:p-0 wow animate__animated animate__zoomIn">
                   <div
                     key={index}
-                    className="card group md:aspect-[1.5/1.5] lg:aspect-[1.5/1.1] xl:aspect-[1.5/1.9] 3xl:aspect-auto  py-[40px] xl:py-[50px] px-[20px]  bg-white text-center rounded-2xl    relative overflow-hidden group"
+                    className="card group md:aspect-[1.5/1.5] lg:aspect-[1.5/1.1] xl:aspect-[1.5/1.9] 3xl:aspect-auto  py-[40px] xl:py-[50px] px-[20px]  bg-white dark:bg-black dark:border-[3px] dark:text-Primary text-center rounded-2xl    relative overflow-hidden group"
                   >
                     <div className="w-[128px] h-[128px] bg-Primary z-[1] absolute top-[-75px] right-[390px] rounded-[50%] transition-all duration-[0.5s] ease-in group-hover:scale-[10]"></div>
                     <div className="relative z-[2]">
@@ -65,11 +65,11 @@ const Service = () => {
                             alt=""
                             className=" absolute w-[40px] 2xl:w-[50px] 3xl:w-[65px] h-[40px] 2xl:h-[50px] 3xl:h-[65px] top-[22px] 2xl:top-[27px] left-[21px] 2xl:left-[26px] 3xl:left-[28px]  duration-300 "
                           />
-                            <img
-                                        src={service.colorImage}
-                                                        alt=""
-                                                        className=" absolute w-[40px] 2xl:w-[50px] 3xl:w-[65px] h-[40px] 2xl:h-[50px] 3xl:h-[65px] top-[22px] 2xl:top-[27px] left-[21px] 2xl:left-[26px] 3xl:left-[28px] transition-opacity duration-300 group-hover:opacity-100 opacity-0"
-                                                    />
+                          <img
+                            src={service.colorImage}
+                            alt=""
+                            className=" absolute w-[40px] 2xl:w-[50px] 3xl:w-[65px] h-[40px] 2xl:h-[50px] 3xl:h-[65px] top-[22px] 2xl:top-[27px] left-[21px] 2xl:left-[26px] 3xl:left-[28px] transition-opacity duration-300 group-hover:opacity-100 opacity-0"
+                          />
                         </div>
                       </div>
                       <h5 className="text-[22px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] font-Secondary pb-[10px] 2xl:pb-[20px] transition-all duration-[0.7s] group-hover:text-white wow animate__animated animate__zoomIn">
@@ -79,7 +79,7 @@ const Service = () => {
                         {service.decription}
                       </p>
                     </div>
-                  </div>
+                  </div>  
                 </div>
               ))}
             </div>

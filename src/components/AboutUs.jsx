@@ -2932,7 +2932,7 @@ const AboutUs = () => {
                                 <p className='pb-[20px] font-Secondary text-[20px] wow animate__animated animate__zoomIn'>In a world driven by rapid innovation. The Hidden Ideas is a place where imagination meets innovation where the most transformative concepts are born.This is a place where bold ideas emerge through the power of technology, This is not just a space for ideas, it is a sanctuary for growth, powered by the latest technological breakthroughs. With a relentless pursuit of the unseen, we explore unknown possibilities and craft solutions that push boundaries. By embracing cutting-edge technology, we accelerate evolution, igniting progress that transforms businesses, communities and industries for a future that is not only bright but infinite.</p>
                                 <ul className='w-full flex gap-[10px]'>
                                     {aboutBox.map((aboutBox, index) => (
-                                        <li key={index} className='w-4/12 flex flex-col items-center justify-center h-full py-[35px] px-[25px] bg-white rounded-lg wow animate__animated animate__zoomIn'>
+                                        <li key={index} className='w-4/12 flex flex-col items-center justify-center h-full py-[35px] px-[25px] bg-white dark:bg-black dark:text-white dark:shadow-chooseBox  rounded-lg wow animate__animated animate__zoomIn'>
                                             <img src={aboutBox.image} alt="" className='w-[20%] pb-[20px]' />
                                             <h3 className='uppercase font-Secondary'>{aboutBox.title}</h3>
                                         </li>
@@ -2955,7 +2955,7 @@ const AboutUs = () => {
                                 <p className='pb-[20px] font-Secondary text-[12px] sm:text-[16px] wow animate__animated animate__zoomIn'>In a world driven by rapid innovation. The Hidden Ideas is a place where imagination meets innovation where the most transformative concepts are born.This is a place where bold ideas emerge through the power of technology, This is not just a space for ideas, it is a sanctuary for growth, powered by the latest technological breakthroughs. With a relentless pursuit of the unseen, we explore unknown possibilities and craft solutions that push boundaries. By embracing cutting-edge technology, we accelerate evolution, igniting progress that transforms businesses, communities and industries for a future that is not only bright but infinite.</p>
                                 <ul className='w-full flex gap-[10px]'>
                                     {aboutBox.map((aboutBox, index) => (
-                                        <li key={index} className='w-4/12 flex flex-col items-center justify-center h-full py-[20px] sm:py-[35px] px-[15px] sm:px-[25px] bg-white rounded-lg wow animate__animated animate__zoomIn'>
+                                        <li key={index} className='w-4/12 flex flex-col items-center justify-center h-full py-[20px] sm:py-[35px] px-[15px] sm:px-[25px] bg-white dark:bg-black dark:text-white dark:shadow-chooseBox rounded-lg wow animate__animated animate__zoomIn'>
                                             <img src={aboutBox.image} alt="" className='w-[40%] md:w-[20%] pb-[20px]' />
                                             <h3 className='uppercase font-Secondary text-[12px] sm:text-[14px] md:text-[16px]'>{aboutBox.title}</h3>
                                         </li>

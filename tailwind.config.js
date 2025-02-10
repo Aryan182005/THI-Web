@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -113,8 +114,10 @@ module.exports = {
       },
       boxShadow: {
         custom: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)',
+        customTwo: '0 15px 30px rgba(255, 255, 255, 0.30), 0 10px 10px rgba(255, 255, 255, 0.22)',
         process: ' 0px 5px 15px #1173b942',
         'chooseBox': '0px 0px 20px 0px #1173b942',
+        'chooseBox2': '0px 0px 100px  #1173b9ee',
         'testimoialsBox': '0px 0px 20px 0px #1173B9',
         'custom-inset': 'inset 0 0 0 2em #1173b9ee',
       },

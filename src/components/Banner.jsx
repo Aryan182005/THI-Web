@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoClose } from "react-icons/io5";
 import Wow from "wow.js";
 import "animate.css";
+import emailjs from "@emailjs/browser";
 
 const Banner = () => {
+  const formRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     phone_no: "",
-    services: "",
     message: "",
   });
 
@@ -24,11 +24,7 @@ const Banner = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value, });
   };
 
   const validatePhone = (phone) => {
@@ -52,22 +48,42 @@ const Banner = () => {
 
     setFormStatus({ isSubmitting: true, successMessage: "", errorMessage: "" });
 
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+    // try {
+    //       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      setFormData({ name: "", phone_no: "", message: "" });
-      setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
-      setShowModal(true);
-      setTimeout(() => {
-        setIsOpen(false);
-        setShowModal(false);
-      }, 2000);
-    } catch (error) {
-      setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "An error occurred, please try again later." });
-      setShowModal(true);
-    }
+    //       setFormData({ name: "", phone_no: "", message: "" });
+    //       setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
+    //       setShowModal(true);
+
+
+    //       setTimeout(() => {
+    //         setIsOpen(false);
+    //         setShowModal(false);
+    //       }, 2000);
+    //     } catch (error) {
+    //       setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "An error occurred, please try again later." });
+    //       setShowModal(true);
+    //     }
+
+    emailjs
+      .sendForm("service_3ukcssu", "template_dbxs0md", formRef.current, "P-OSDlUB9u3dfTODU")
+      .then(
+        () => {
+          setFormData({ name: "", phone_no: "", message: "" });
+          setFormStatus({ isSubmitting: false, successMessage: "Message sent successfully!", errorMessage: "" });
+          setShowModal(true);
+
+          setTimeout(() => {
+            setShowModal(false);
+            setIsOpen(false);
+          }, 2000);
+        },
+        () => {
+          setFormStatus({ isSubmitting: false, successMessage: "", errorMessage: "Failed to send message. Try again!" });
+          setShowModal(true);
+        }
+      );
   };
-
 
   useEffect(() => {
     const handleKeydown = (e) => {
@@ -113,7 +129,7 @@ const Banner = () => {
 
   return (
     <>
-      <section className="py-[50px] bg-[#7c78781a]">
+      <section className="py-[50px] bg-[#7c78781a] dark:bg-black dark:text-white ">
         <div className="container">
           <div className="row">
             <div className="flex flex-wrap w-full justify-between relative px-[20px] sm:px-0">
@@ -121,7 +137,7 @@ const Banner = () => {
                 <h3 className="text-[18px] sm:text-[20px] md:text-[26px] font-Secondary font-semibold capitalize wow animate__animated animate__zoomIn">
                   Your Vision, Our Code Delivered Innovation todays.
                 </h3>
-                <h2 className="text-[28px] sm:text-[50px] 3xl:text-[74px] font-Secondary font-bold pb-[15px] sm:pb-0 wow animate__animated animate__zoomIn">
+                <h2 className="text-[28px] sm:text-[50px] 3xl:text-[74px] dark:text-Primary font-Secondary font-bold pb-[15px] sm:pb-0 wow animate__animated animate__zoomIn">
                   The Hidden Ideas
                 </h2>
                 <p className="text-[14px] sm:text-[16px] md:text-[20px] capitalize font-Secondary tracking-wider wow animate__animated animate__zoomIn">
@@ -144,8 +160,8 @@ const Banner = () => {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <h2 className="text-xl md:text-3xl font-semibold text-black font-Secondary mb-4 text-center">Let’s Build Together</h2>
-                        <div className="">
-                          <form onSubmit={handleSubmit} className="flex flex-wrap md:p-[20px] justify-center">
+                        <div className="dark:text-black">
+                          <form ref={formRef} onSubmit={handleSubmit} className="flex flex-wrap md:p-[20px] justify-center">
                             <div className="text-start w-full md:w-6/12 md:px-[10px] py-[10px] sm:py-[20px] wow animate__animated animate__zoomIn">
                               <label className="font-Secondary text-[14px] sm:text-[16px]">Your Name <span className="text-[#0073e9]">*</span></label>
                               <input

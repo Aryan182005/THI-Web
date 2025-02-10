@@ -59,7 +59,7 @@ const Clientlogo = () => {
 
     return (
         <>
-            <section className='py-[60px] xl:py-[100px] relative'>
+            <section className='py-[60px] xl:py-[100px] relative bg-[#7c78781a] dark:bg-black dark:text-white'>
                 <div className="container">
                     <div className="row">
                         <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px]  font-Primary font-bold mb-[50px] uppercase tracking-wider wow animate__animated animate__zoomIn">
