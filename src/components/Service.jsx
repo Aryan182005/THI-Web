@@ -54,7 +54,7 @@ const Service = () => {
                 <div className="w-full md:w-6/12 xl:w-4/12 p-[10px] xl:p-0 wow animate__animated animate__zoomIn">
                   <div
                     key={index}
-                    className="card group md:aspect-[1.5/1.5] lg:aspect-[1.5/1.1] xl:aspect-[1.5/1.9] 3xl:aspect-auto  py-[40px] xl:py-[50px] px-[20px]  bg-white dark:bg-black dark:border-[3px] dark:text-Primary text-center rounded-2xl    relative overflow-hidden group"
+                    className="card group md:aspect-[1.5/1.5] lg:aspect-[1.5/1.1] xl:aspect-[1.5/1.9] 3xl:aspect-auto  py-[40px] xl:py-[50px] px-[20px] dark:shadow-chooseBox2  bg-white dark:bg-black dark:border-[3px] dark:text-Primary text-center rounded-2xl    relative overflow-hidden group"
                   >
                     <div className="w-[128px] h-[128px] bg-Primary z-[1] absolute top-[-75px] right-[390px] rounded-[50%] transition-all duration-[0.5s] ease-in group-hover:scale-[10]"></div>
                     <div className="relative z-[2]">

@@ -104,7 +104,7 @@ const Banner = () => {
       window.removeEventListener("keydown", handleKeydown);
       document.body.style.overflow = "auto";
     };
-  }, [isOpen]);
+  },);
 
 
   const closeModal = () => {
@@ -146,7 +146,7 @@ const Banner = () => {
                   team ensures your vision becomes a digital masterpiece.
                 </p>
                 <div className="pt-[30px] flex justify-center xl:justify-start wow animate__animated animate__zoomIn">
-                  <button onClick={toggleModal} className="relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px]">
+                  <button onClick={toggleModal} className="cursor-custom dark:cursor-custom_light relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px]">
                     Let’s Build Together
                     <span className="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
                   </button>
@@ -206,7 +206,7 @@ const Banner = () => {
                               <button
                                 type="submit"
                                 disabled={formStatus.isSubmitting}
-                                className={`relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px] ${formStatus.isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                className={`cursor-custom relative flex items-center justify-center xl:justify-start group overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white hover:border-[3px] ${formStatus.isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                               >
                                 {formStatus.isSubmitting ? 'Submitting...' : 'Send Message'}
                                 <span className="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
@@ -215,7 +215,7 @@ const Banner = () => {
                           </form>
                           <button
                             onClick={toggleModal}
-                            className="absolute top-0 right-0 flex items-center justify-center  p-2  text-Primary text-3xl "
+                            className="cursor-custom absolute top-0 right-0 flex items-center justify-center  p-2  text-Primary text-3xl "
                           >
                             <IoClose />
                           </button>

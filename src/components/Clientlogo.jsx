@@ -65,9 +65,9 @@ const Clientlogo = () => {
                         <div className="heading flex justify-center text-[24px] sm:text-[30px] md:text-[38px]  font-Primary font-bold mb-[50px] uppercase tracking-wider wow animate__animated animate__zoomIn">
                             <h2>Valued Clients</h2>
                         </div>
-                        <div className="flex flex-wrap w-full gap-[30px] justify-center hidden lg:flex">
+                        <div className="flex flex-wrap w-full gap-[30px] justify-center hidden  lg:flex">
                             {clientLogo.map((clientLogo, index) => (
-                                <div key={index} className="w-3/12 lg:w-2/12 3xl:w-1/12 flex justify-center items-center border-[3px] border-Primary rounded-xl p-[40px] grayscale transition-all duration-[0.2s] hover:grayscale-0 cursor-pointer wow animate__animated animate__zoomIn">
+                                <div key={index} className="cursor-custom dark:cursor-custom_light w-3/12 lg:w-2/12 3xl:w-1/12 flex justify-center items-center border-[3px] border-Primary rounded-xl p-[40px] grayscale transition-all duration-[0.2s] hover:grayscale-0  wow animate__animated animate__zoomIn">
                                     <img src={clientLogo.Logo} alt={`Client ${index + 1}`} />
                                 </div>
                             ))}
@@ -77,7 +77,7 @@ const Clientlogo = () => {
                                 {clientLogo.map((clientLogo, index) => (
                                     <div
                                         key={index}
-                                        className="w-[120px] lg:w-[150px] xl:w-[180px] flex justify-center items-center aspect-[2/2] border-[3px] border-Primary rounded-xl p-[20px] grayscale transition-all duration-[0.2s] hover:grayscale-0 cursor-pointer mx-2 "
+                                        className="cursor-custom dark:cursor-custom_light w-[120px] lg:w-[150px] xl:w-[180px] flex justify-center items-center aspect-[2/2] border-[3px] border-Primary rounded-xl p-[20px] grayscale transition-all duration-[0.2s] hover:grayscale-0  mx-2 "
                                     >
                                         <img src={clientLogo.Logo} alt={`Client ${index + 1}`} className="max-w-full" />
                                     </div>

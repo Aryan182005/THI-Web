@@ -32,11 +32,6 @@ const Footer = () => {
         },
         {
             id: 4,
-            FLink: 'Career',
-            path: "/career",
-        },
-        {
-            id: 5,
             FLink: 'Company',
             path: "/company",
         },
@@ -70,7 +65,7 @@ const Footer = () => {
         },
     ]
 
-        const socialLink = [
+    const socialLink = [
             {
                 icon: <RiFacebookFill />,
                 path: "/facebook",
@@ -87,7 +82,7 @@ const Footer = () => {
                 icon: <BiLogoSkype />,
                 path: "skype:live:.cid.981927945f0b7178?chat",
             },
-        ]
+    ]
     
     return (
         <>
@@ -97,8 +92,8 @@ const Footer = () => {
                         <div className="footer_top flex flex-wrap xl:flex-nowrap xl:gap-[30px] w-full">
                             <div className="w-full md:w-6/12 xl:w-3/12 2xl:w-4/12 flex md:flex-col gap-[30px] pb-[50px] md:pb-[30px]">
                                 <div className=" px-[10px] xl:px-0 ">
-                                    <div className='pb-[30px] lg:pb-[40px] flex justify-center md:justify-start wow animate__animated animate__zoomIn'>
-                                       <Link to="/" onClick={() => window.scrollTo(0, 0)}> <img src={logo} alt="" /></Link>
+                                    <div className='cursor-custom dark:cursor-custom_light pb-[30px] lg:pb-[40px] flex justify-center md:justify-start wow animate__animated animate__zoomIn'>
+                                       <Link to="/" className='cursor-custom' onClick={() => window.scrollTo(0, 0)}> <img src={logo} alt="" /></Link>
                                     </div>
                                     <ul className='flex flex-col gap-[25px]'>
                                         <li className='flex items-center justify-center md:justify-start wow animate__animated animate__zoomIn'>
@@ -107,7 +102,7 @@ const Footer = () => {
                                         </li>
                                         <li className='flex items-center justify-center md:justify-start wow animate__animated animate__zoomIn'>
                                             <TbPhoneCall className='text-[26px]' />
-                                            <Link to={'tel:9687311505'} className='ps-[10px] font-Secondary font-medium text-[16px] 2xl:text-[18px] 3xl:text-[20px] tracking-wider'>+91 96873 11505</Link>
+                                            <Link to={'tel:9687311505'} className='cursor-custom ps-[10px] font-Secondary font-medium text-[16px] 2xl:text-[18px] 3xl:text-[20px] tracking-wider'>+91 96873 11505</Link>
                                         </li>
                                         <li className='flex items-center justify-center md:justify-start wow animate__animated animate__zoomIn'>
                                             <TbClockHour4 className='text-[26px]' />
@@ -125,7 +120,7 @@ const Footer = () => {
                                     <ul className='flex flex-col gap-[10px] md:gap-[20px] '>
                                         {companyLinks.map((companyLinks, id) => (
                                             <li key={id} className='wow animate__animated animate__zoomIn'>
-                                                <NavLink to={companyLinks.path || "#"} className={({ isActive }) => ` uppercase font-semibold text-[16px] 2xl:text-[18px] 3xl:text-[20px] font-Secondary tracking-widest duration-200 ${isActive || (socialLink.path === "/" && window.location.pathname === "/")
+                                                <NavLink to={companyLinks.path || "#"} className={({ isActive }) => `cursor-custom uppercase font-semibold text-[16px] 2xl:text-[18px] 3xl:text-[20px] font-Secondary tracking-widest duration-200 ${isActive || (socialLink.path === "/" && window.location.pathname === "/")
                                                     ? "text-Primary"
                                                     : "text-gray-700"
                                                     } hover:text-Primary`} onClick={() => window.scrollTo(0, 0)}>
@@ -142,7 +137,7 @@ const Footer = () => {
                                     <ul className='flex flex-col gap-[10px] md:gap-[20px]'>
                                         {serviceLinks.map((serviceLinks, id) => (
                                             <li key={id} className='wow animate__animated animate__zoomIn'>
-                                                <NavLink  className={({ isActive }) => `uppercase font-semibold text-[16px] 2xl:text-[18px] 3xl:text-[20px] font-Secondary tracking-widest duration-200 text-[#374151]
+                                                <NavLink  className={({ isActive }) => `cursor-custom uppercase font-semibold text-[16px] 2xl:text-[18px] 3xl:text-[20px] font-Secondary tracking-widest duration-200 text-[#374151]
                                                      hover:text-Primary`} onClick={() => window.scrollTo(0, 0)}>
                                                     {serviceLinks.FLink}
                                                 </NavLink>
@@ -156,7 +151,7 @@ const Footer = () => {
                                     <h2 className='uppercase font-Secondary tracking-wider font-semibold text-[24px] 3xl:text-[28px] wow animate__animated animate__zoomIn'>Join Our Newsletter</h2>
                                     <p className='text-[16px] 2xl:text-[18px] 3xl:text-[20px] font-Secondary tracking-wider wow animate__animated animate__zoomIn'>Stay ahead of the tech world with our newsletter! Subscribe to get the latest IT industry insights, tech trends, and expert tips straight to your inbox.</p>
                                     <div className="btn flex justify-center md:justify-start wow animate__animated animate__zoomIn">
-                                        <button onClick={handleContactClick} class="relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
+                                        <button onClick={handleContactClick} class="cursor-custom relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-6 font-Secondary text-Primary text-[14px] sm:text-[16px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px]">
                                             Get in Touch
                                             <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
                                         </button>
@@ -173,7 +168,7 @@ const Footer = () => {
                     <ul className='flex gap-[10px] lg:gap-[20px]'>
                         {socialLink.map((socialLink, index) => (
                             <li key={index} className='overflow-hidden wow animate__animated animate__zoomIn'>
-                                <NavLink to={socialLink.path || "#"} target='' className={({ isActive }) => `relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-3 font-Secondary text-Primary text-[16px] lg:text-[20px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px] ${isActive || (socialLink.path === "/" && window.location.pathname === "/")}`} >
+                                <NavLink to={socialLink.path || "#"} target='' className={({ isActive }) => `cursor-custom relative flex items-center justify-center xl:justify-start   group  overflow-hidden py-2 sm:py-3 px-3 sm:px-3 font-Secondary text-Primary text-[16px] lg:text-[20px] rounded-lg hover:bg-primary-dark uppercase font-semibold border-[3px] border-Primary tracking-wider transition-all duration-[0.5s] bg-white  hover:border-[3px] ${isActive || (socialLink.path === "/" && window.location.pathname === "/")}`} >
                                     {socialLink.icon}
                                     <span class="absolute inset-0 w-[200px] h-[100px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
                                 </NavLink>
