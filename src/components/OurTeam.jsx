@@ -1,4 +1,3 @@
-import React from 'react'
 import Team from '../assets/Team.jpg'
 
 const OurTeam = () => {

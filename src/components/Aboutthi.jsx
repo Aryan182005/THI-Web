@@ -1,4 +1,3 @@
-import React from 'react'
 import idea from '../assets/idea_color.png'
 import rocket from '../assets/rocket_color.png'
 

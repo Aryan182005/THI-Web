@@ -1,15 +1,15 @@
-import './App.css';
-import { Route, Routes,} from 'react-router-dom';
-import { useState, } from 'react';
-import Home from './page/Home';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './page/About';
-import ScrollToTop from './components/ScrollToTop';
-import ServicePage from './page/ServicePage';
-import CompanyPage from './page/CompanyPage';
-import ContactPage from './page/ContactPage';
-import usePreventInspect from './components/usePreventInspect';
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./page/Home";
+import About from "./page/About";
+import ServicePage from "./page/ServicePage";
+import CompanyPage from "./page/CompanyPage";
+import ContactPage from "./page/ContactPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import usePreventInspect from "./components/usePreventInspect";
+import "./App.css";
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

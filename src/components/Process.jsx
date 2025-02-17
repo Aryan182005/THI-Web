@@ -1,4 +1,3 @@
-import React from 'react'
 import idea from '../assets/idea_color.png'
 import strategize from '../assets/Strategize_color.png'
 import build from '../assets/build_color.png'

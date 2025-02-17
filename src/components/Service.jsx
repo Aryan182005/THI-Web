@@ -1,4 +1,3 @@
-import React from "react";
 import website from "../assets/settings.png";
 import android from "../assets/android.png";
 import uiux from "../assets/ux-design.png";

@@ -1,4 +1,3 @@
-import React from 'react'
 import Marquee from 'react-fast-marquee'
 import logo1 from '../assets/client1.webp'
 import logo2 from '../assets/client2.webp'

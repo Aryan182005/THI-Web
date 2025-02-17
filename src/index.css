@@ -18,6 +18,21 @@
   .cursor-light {
     cursor: url('/src/assets/cursor_light.png'), auto;
   }
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+   background-color: #1173b9ee;
+    border-radius: 4px;  
+  }
+
+  html {
+    scroll-behavior: initial;
+  }
 }
 
 body {

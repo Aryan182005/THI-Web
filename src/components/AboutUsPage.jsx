@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Wow from "wow.js";
 import "animate.css";
 
@@ -9,7 +9,7 @@ const AboutUsPage = () => {
             live: false,
         }).init();
     }, []);
-    
+
     return (
         <>
             <section className='py-[50px] bg-[#1173b942] hidden xl:block'>
@@ -2063,6 +2063,7 @@ const AboutUsPage = () => {
                                         Join us
                                         <span class="absolute inset-0 w-[300px] h-[200px] bg-Primary group-hover:left-[130%] group-hover:top-[130%] transition-all duration-500 ease-out rotate-[25deg] left-[-320px] top-[-150px]"></span>
                                     </button>
+                                   
                                 </div>
                             </div>
                         </div>

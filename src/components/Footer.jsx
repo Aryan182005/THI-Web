@@ -1,4 +1,3 @@
-import React from 'react'
 import logo from '../assets/Logo.png'
 import location from '../assets/location.png'
 import { TbPhoneCall, TbClockHour4 } from "react-icons/tb";
@@ -45,23 +44,19 @@ const Footer = () => {
     const serviceLinks = [
         {
             id: 6,
-            FLink: 'Web Development',
+            FLink: 'Front End',
         },
         {
             id: 7,
-            FLink: 'App Development',
+            FLink: 'Back End',
         },
         {
             id: 8,
-            FLink: 'Ui/Ux Design',
+            FLink: 'Frameworks',
         },
         {
             id: 9,
-            FLink: 'Degital Marketing',
-        },
-        {
-            id: 10,
-            FLink: 'SEO',   
+            FLink: 'Mobile',
         },
     ]
 

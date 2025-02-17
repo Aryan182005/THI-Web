@@ -124,5 +124,8 @@ module.exports = {
     },
   },
   plugins: [],
-}
+  corePlugins:{
+    preflight:true,
+  },
+};
 
